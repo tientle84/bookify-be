@@ -12,6 +12,6 @@ public class AuthenticationService {
     private UserRepository userRepository;
 
     public User login(String emailId, String password){
-        return null;
+        return userRepository.findByEmailIdAndPassword(emailId,password);
     }
 }
