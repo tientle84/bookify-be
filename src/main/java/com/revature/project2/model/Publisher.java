@@ -14,7 +14,7 @@ import java.util.Objects;
 @ToString
 public class Publisher {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "publisher_id")
     private int id;
     @Column(name="publisher_name")

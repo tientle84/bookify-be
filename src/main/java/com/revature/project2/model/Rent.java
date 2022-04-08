@@ -17,7 +17,7 @@ import java.util.Objects;
 @ToString
 public class Rent {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "rent_id")
     private int rent_id;
 

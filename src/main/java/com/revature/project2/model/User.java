@@ -16,11 +16,11 @@ import java.util.Objects;
 @ToString
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="user_id")
     private int id;
 
-    @Column(name="emailId")
+    @Column(name="emailId", unique = true)
     private String emailId;
 
     @Column(name="password")

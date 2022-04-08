@@ -15,7 +15,7 @@ import java.util.Objects;
 @AllArgsConstructor
 public class BookStatus {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "BookStatus_id")
     private  int id;
 

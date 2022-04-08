@@ -15,7 +15,7 @@ import java.util.Objects;
 @ToString
 public class Author {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="author_id")
     private int author_id;
 
