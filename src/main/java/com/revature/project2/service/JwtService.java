@@ -25,7 +25,7 @@ public class JwtService {
 
     public  String createJwt(User user){
         String jwt= Jwts.builder()
-                .claim("user_dto",new UserJwtDto(user.getId(),user.getFirst_name(),user.getLast_name(),user.getEmailId()))
+                .claim("user_dto",new UserJwtDto(user.getId(),user.getFirst_name(),user.getLast_name(),user.getEmailId(),user.getUserRole()))
                 .signWith(key)
                 .compact();
         return  jwt;
