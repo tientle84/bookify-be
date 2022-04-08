@@ -9,5 +9,5 @@ public interface UserRepository extends JpaRepository<User,Integer> {
 
     public abstract User findByEmailIdAndPassword(String email,String password);
 
-    
+
 }
