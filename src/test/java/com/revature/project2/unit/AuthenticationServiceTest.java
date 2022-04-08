@@ -1,15 +1,21 @@
 package com.revature.project2.unit;
 
 import com.revature.project2.dao.UserRepository;
+import com.revature.project2.exception.BadParamterException;
 import com.revature.project2.model.User;
 import com.revature.project2.model.UserRole;
 import com.revature.project2.service.AuthenticationService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+
+import javax.security.auth.login.FailedLoginException;
+
+import java.util.concurrent.TimeUnit;
 
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
@@ -29,7 +35,8 @@ public class AuthenticationServiceTest {
     private AuthenticationService authService;
 
     @Test
-    public void test_positive_validUsernameAndPassword_noWhitespace(){
+    @Timeout(value = 5000,unit= TimeUnit.MILLISECONDS)
+    public void test_positive_validUsernameAndPassword_noWhitespace() throws FailedLoginException, BadParamterException {
 
 
 
@@ -75,7 +82,8 @@ public class AuthenticationServiceTest {
     }
 
    @Test
-    public void test_positive_validUsernameAndPassword_withWhitespace(){
+   @Timeout(value = 5000,unit= TimeUnit.MILLISECONDS)
+    public void test_positive_validUsernameAndPassword_withWhitespace() throws FailedLoginException, BadParamterException {
        User fakeUser= new User();
        fakeUser.setId(100);
        fakeUser.setFirst_name("test");
@@ -116,4 +124,21 @@ public class AuthenticationServiceTest {
 
        Assertions.assertEquals(expected,actual);
    }
+
+   @Test
+   @Timeout(value = 5000,unit= TimeUnit.MILLISECONDS)
+    public  void  test_login_invalidEmailIdAndPassword(){
+        //
+       Assertions.assertThrows(FailedLoginException.class,() -> {
+           authService.login("Inavlid","Invalid");
+       });
+   }
+   @Test
+    @Timeout(value = 5000,unit= TimeUnit.MILLISECONDS)
+    public void test_login_allWhitespaceOrBlank(){
+        Assertions.assertThrows(BadParamterException.class,() ->{
+            authService.login("   ", "  ");
+        });
+   }
+
 }
