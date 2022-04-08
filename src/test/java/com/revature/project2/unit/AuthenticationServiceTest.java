@@ -73,4 +73,47 @@ public class AuthenticationServiceTest {
 
         Assertions.assertEquals(expected,actual);
     }
+
+   @Test
+    public void test_positive_validUsernameAndPassword_withWhitespace(){
+       User fakeUser= new User();
+       fakeUser.setId(100);
+       fakeUser.setFirst_name("test");
+       fakeUser.setPhone("12345");
+       fakeUser.setLast_name("testify");
+       fakeUser.setAddress("toronto");
+       fakeUser.setEmailId("correctEmailId");
+       fakeUser.setPassword("correctPassword");
+
+       UserRole e=new UserRole();
+       e.setId(1);
+       e.setUserRole("liberian");
+
+       fakeUser.setUserRole(e);
+
+
+       when(userRepository.findByEmailIdAndPassword(eq("correctEmailId"),eq("correctPassword"))).thenReturn(
+               fakeUser
+       );
+
+       User actual=authService.login("   correctEmailId  ","  correctPassword  ");
+
+
+       User expected= new User();
+       expected.setId(100);
+       expected.setFirst_name("test");
+       expected.setLast_name("testify");
+       expected.setPhone("12345");
+       expected.setAddress("toronto");
+       expected.setEmailId("correctEmailId");
+       expected.setPassword("correctPassword");
+
+       UserRole liberian=new UserRole();
+       liberian.setId(1);
+       liberian.setUserRole("liberian");
+
+       expected.setUserRole(liberian);
+
+       Assertions.assertEquals(expected,actual);
+   }
 }
