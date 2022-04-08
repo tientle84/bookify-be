@@ -9,12 +9,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-@EnableAutoConfiguration
 public class Project2Application {
+
 	@Autowired
 	private DataPopulateUtility util;
 
 	public static void main(String[] args) {
+		System.out.println(System.getenv("db_password"));
 		SpringApplication.run(Project2Application.class, args);
 	}
 
