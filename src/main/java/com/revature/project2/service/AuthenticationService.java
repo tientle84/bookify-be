@@ -4,6 +4,7 @@ package com.revature.project2.service;
 import com.revature.project2.dao.UserRepository;
 import com.revature.project2.exception.BadParamterException;
 import com.revature.project2.model.User;
+import com.revature.project2.model.UserDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,4 +27,9 @@ public class AuthenticationService {
         }
         return  user;
     }
+
+   public  User register(UserDto user){
+       //userRepository.save(user)
+       return  null;
+   }
 }
