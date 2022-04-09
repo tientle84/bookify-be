@@ -10,10 +10,11 @@ import lombok.*;
 @EqualsAndHashCode
 @AllArgsConstructor
 public class UserDto {
-    private String emailId;
+    private int id;
     private String first_name;
     private String last_name;
+    private String emailId;
     private UserRole userRole;
-    private String user_address;
-    private String user_phone;
+    private String phone;
+
 }
