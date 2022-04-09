@@ -34,8 +34,9 @@ public class Book {
     private String publisher;
 
     @Column(name="publish_date")
-    private Timestamp publish_date;
+    private String publish_date;
 
+    @Lob
     @Column(name="image_url")
     private  String image_url;
 
