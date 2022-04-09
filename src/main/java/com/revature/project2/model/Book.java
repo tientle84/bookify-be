@@ -27,15 +27,11 @@ public class Book {
     @Column(name = "title")
     private String title;
 
-   // @JoinColumn(name="author_id")
-    @ManyToOne
-   // @OnDelete(action= OnDeleteAction.CASCADE)
-    private Author author;
+    @Column(name="author")
+    private String author;
 
-    //@JoinColumn(name="publisher_id")
-    @ManyToOne
-    //@OnDelete(action = OnDeleteAction.CASCADE)
-    private Publisher publisher;
+    @Column(name="publisher")
+    private String publisher;
 
     @Column(name="publish_date")
     private Timestamp publish_date;
