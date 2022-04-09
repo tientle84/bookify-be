@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.security.auth.login.FailedLoginException;
-import javax.security.auth.login.LoginException;
 
 @Service
 public class AuthenticationService {
@@ -26,4 +25,9 @@ public class AuthenticationService {
         }
         return  user;
     }
+
+   public  User register(User user){
+      User newUser= userRepository.save(user);
+      return  newUser;
+   }
 }
