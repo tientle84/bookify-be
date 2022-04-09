@@ -2,16 +2,12 @@ package com.revature.project2;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.ApplicationContext;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-@SpringBootTest
+@SpringBootTest(classes = Project2ApplicationTests.class)
 class Project2ApplicationTests {
 
 	@Test
-	void contextLoads(ApplicationContext context) {
-		assertThat(context).isNotNull();
+	void contextLoads() {
 	}
 
 }
