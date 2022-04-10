@@ -1,5 +1,6 @@
 package com.revature.project2.Utility;
 
+import com.revature.project2.model.BookStatus;
 import com.revature.project2.model.User;
 import com.revature.project2.model.UserRole;
 import org.springframework.stereotype.Component;
@@ -49,6 +50,18 @@ public class DataPopulateUtility {
         user2.setPhone("34234234234");
         user2.setUserRole(bookRenter);
         em.persist(user2);
+
+        /*
+        BOOK STATUS
+         */
+        BookStatus bookStatus1=new BookStatus();
+        bookStatus1.setBook_status("Available");
+        em.persist(bookStatus1);
+
+        BookStatus bookStatus2=new BookStatus();
+        bookStatus2.setBook_status("Not Available");
+        em.persist(bookStatus2);
+
 
 
 
