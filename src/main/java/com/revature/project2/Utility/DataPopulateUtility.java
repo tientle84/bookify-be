@@ -1,5 +1,6 @@
 package com.revature.project2.Utility;
 
+import com.revature.project2.model.Book;
 import com.revature.project2.model.BookStatus;
 import com.revature.project2.model.User;
 import com.revature.project2.model.UserRole;
@@ -8,6 +9,8 @@ import org.springframework.stereotype.Component;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
+import java.sql.Timestamp;
+import java.time.LocalDate;
 
 @Component
 public class DataPopulateUtility {
@@ -62,10 +65,30 @@ public class DataPopulateUtility {
         bookStatus2.setBook_status("Not Available");
         em.persist(bookStatus2);
 
+        /*
+        * ----------------Books----------
+        * */
+        Book book = new Book();
+        book.setAuthor("Robin Sharma");
+        book.setGenre("self Help");
+        book.setIsbn("978-3-16-148410-0");
+        book.setPublish_date(String.valueOf((String.valueOf(LocalDate.of(2018,12,04)))));
+        book.setImage_url("https://www.robinsharma.com/files/img/book/9156802291265ef1ee1f6720f3ab8bc0.png");
+        book.setPublisher("HapperCollins");
+        book.setTitle("The 5 Am Club");
+        book.setBookStatus(bookStatus1);
+        em.persist(book);
 
-
-
-
+        Book book1 = new Book();
+        book1.setAuthor("Karen Swan");
+        book1.setGenre("Romance novel");
+        book1.setIsbn("978-1-50-984062-5");
+        book1.setPublish_date(String.valueOf((String.valueOf(LocalDate.of(2018,04,24)))));
+        book1.setImage_url("https://www.robinsharma.com/files/img/book/9156802291265ef1ee1f6720f3ab8bc0.png");
+        book1.setPublisher("Pan Macmillan");
+        book1.setTitle("The Greek Escape");
+        book1.setBookStatus(bookStatus2);
+        em.persist(book1);
 
     }
 

@@ -8,6 +8,10 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @SpringBootApplication
 public class Project2Application {
 
@@ -15,7 +19,7 @@ public class Project2Application {
 	private DataPopulateUtility util;
 
 	public static void main(String[] args) {
-		System.out.println(System.getenv("db_password"));
+		System.out.println("Date"+Timestamp.valueOf(LocalDateTime.now()));
 		SpringApplication.run(Project2Application.class, args);
 	}
 
