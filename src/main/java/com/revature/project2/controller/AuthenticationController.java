@@ -1,20 +1,15 @@
 package com.revature.project2.controller;
 
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.revature.project2.exception.BadParamterException;
-import com.revature.project2.model.LoginDTO;
-import com.revature.project2.model.User;
-import com.revature.project2.model.UserDto;
-import com.revature.project2.model.UserRole;
+import com.revature.project2.model.*;
 import com.revature.project2.service.AuthenticationService;
 import com.revature.project2.service.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.security.auth.login.FailedLoginException;
 
@@ -31,7 +26,7 @@ public class AuthenticationController {
 
 
     @PostMapping("/login")
-    public ResponseEntity<?> login(@RequestBody LoginDTO dto) {
+    public ResponseEntity<?> login(@RequestBody LoginDTO dto) throws JsonProcessingException {
         try {
             User user = authService.login(dto.getEmailId(), dto.getPassword());
             String jwt = jwtService.createJwt(user);
@@ -50,7 +45,7 @@ public class AuthenticationController {
     }
 
     @PostMapping("/register")
-    public  ResponseEntity<?> register(@RequestBody User user){
+    public  ResponseEntity<?> register(@RequestBody User user) throws JsonProcessingException {
         UserRole userRole=new UserRole(2,"bookRenter");
         user.setUserRole(userRole);
         User newUser=authService.register(user);
@@ -63,6 +58,7 @@ public class AuthenticationController {
         responseHeaders.set("token",jwt);
         return  ResponseEntity.ok().headers(responseHeaders).body(userDto);
     }
+
 }
 
 
