@@ -30,7 +30,7 @@ public class BookController {
 
     @PostMapping("/addbook")
     public ResponseEntity<?> addBook(@RequestHeader("Authorization") String headerValue,
-                                     @RequestParam("file") MultipartFile file,
+                                     @RequestParam("file") String file,
                                      @RequestParam("isbn") String isbn,
                                      @RequestParam("title") String title,
                                      @RequestParam("author") String author,

@@ -26,19 +26,12 @@ public class BookService {
     }
 
 
-    public Book addBook(MultipartFile file, String isbn, String title, String author, String publisher, String date,
+    public Book addBook(String file, String isbn, String title, String author, String publisher, String date,
                     String genre){
 
     Book b=new Book();
-    String fileName= StringUtils.cleanPath(file.getOriginalFilename());
-    if(fileName.contains("..")){
-        System.out.println("not a valid file");
-    }
-    try{
-        b.setImage_url(Base64.getEncoder().encodeToString(file.getBytes()));
-    }catch (IOException e){
-        e.printStackTrace();
-    }
+
+    b.setImage_url(file);
     b.setIsbn(isbn);
     b.setTitle(title);
     b.setAuthor(author);
