@@ -1,7 +1,9 @@
 package com.revature.project2.dao;
 
 import com.revature.project2.model.Book;
+import com.revature.project2.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -11,8 +13,6 @@ import java.util.List;
 
         public abstract List<Book> findAll();
         public abstract Book findById(int id);
-
-
 
 
     }

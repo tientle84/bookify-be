@@ -8,13 +8,18 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 @SpringBootApplication
-@EnableAutoConfiguration
 public class Project2Application {
+
 	@Autowired
 	private DataPopulateUtility util;
 
 	public static void main(String[] args) {
+		System.out.println("Date"+Timestamp.valueOf(LocalDateTime.now()));
 		SpringApplication.run(Project2Application.class, args);
 	}
 
