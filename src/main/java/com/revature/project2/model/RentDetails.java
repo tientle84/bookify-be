@@ -32,10 +32,10 @@ public class RentDetails {
     private Book book_id;
 
     @Column(name = "expiry_date")
-    private Timestamp expiry_date;
+    private String expiry_date;
 
     @Column(name="return_date")
-    private Timestamp return_date;
+    private String return_date;
 
     @Column(name="final_amount")
     private int final_amount;

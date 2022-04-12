@@ -6,6 +6,7 @@ import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
@@ -32,7 +33,7 @@ public class Rent {
     private User liberian_id;
 
     @Column(name = "date")
-    private Timestamp date;
+    private Date date;
 
     @Override
     public boolean equals(Object o) {
