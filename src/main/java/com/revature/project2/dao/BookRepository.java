@@ -12,7 +12,7 @@ import java.util.List;
     public interface BookRepository extends JpaRepository<Book,Integer> {
 
         public abstract List<Book> findAll();
-        public abstract Book findById(int id);
+     /*   public abstract Book findById(int id) throws Exception;*/
 
 
     }

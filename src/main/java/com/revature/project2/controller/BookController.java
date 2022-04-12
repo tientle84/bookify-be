@@ -3,6 +3,7 @@ package com.revature.project2.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.revature.project2.dao.UserRepository;
+import com.revature.project2.exception.BookNotFOundException;
 import com.revature.project2.model.Book;
 import com.revature.project2.model.UserJwtDto;
 import com.revature.project2.service.AuthenticationService;
@@ -90,7 +91,7 @@ public class BookController {
 
 
     @GetMapping("/books/{id}")
-    public ResponseEntity getBookById(@PathVariable int id) throws Exception {
+    public ResponseEntity getBookById(@PathVariable int id) throws BookNotFOundException {
 
         try {
                Book book= bookService.getBookById(id);

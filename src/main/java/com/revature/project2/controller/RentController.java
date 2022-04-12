@@ -2,6 +2,7 @@ package com.revature.project2.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.revature.project2.dao.BookRepository;
+import com.revature.project2.exception.BookNotFOundException;
 import com.revature.project2.model.*;
 import com.revature.project2.service.JwtService;
 import com.revature.project2.service.RentDetailsService;
@@ -26,8 +27,7 @@ public class RentController {
     private JwtService jwtService;
     @PostMapping("/rent_details")
     public ResponseEntity<?> rent_details(@RequestHeader("Authorization") String headerValue,
-                                          @RequestBody List<RentDetailsDto> rentDetailsDto)
-    {
+                                          @RequestBody List<RentDetailsDto> rentDetailsDto) {
 
         String jwt=headerValue.split(" ")[1];
         try{
@@ -42,7 +42,7 @@ public class RentController {
                 return ResponseEntity.ok().body("Added");
             }
             return ResponseEntity.status(404).body("You are not Authorized to access this end point ");
-        } catch (JsonProcessingException e) {
+        } catch (JsonProcessingException | BookNotFOundException e) {
             return ResponseEntity.status(500).body(e.getMessage());
         }
 

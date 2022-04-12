@@ -51,8 +51,11 @@ public class BookService {
         bookRepository.delete(target);
     }
 
-    public Book getBookById(int bookId) throws Exception {
-        return bookRepository.findById(bookId).orElseThrow(() ->new Exception("Book not found"));
+    public Book getBookById(int bookId) throws BookNotFOundException {
+
+        Book book =bookRepository.findById(bookId).orElseThrow(() ->new BookNotFOundException("Book not found"));
+        //return bookRepository.findById(bookId).orElseThrow(() ->new Exception("Book not found"));
+        return book;
     }
 
     public boolean getBookStatus(int bookId) throws BookNotFOundException{

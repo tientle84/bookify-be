@@ -4,6 +4,7 @@ package com.revature.project2.service;
 import com.revature.project2.dao.BookRepository;
 import com.revature.project2.dao.RentDetailsRepository;
 import com.revature.project2.dao.UserRepository;
+import com.revature.project2.exception.BookNotFOundException;
 import com.revature.project2.model.Book;
 import com.revature.project2.model.BookStatus;
 import com.revature.project2.model.Rent;
@@ -18,8 +19,8 @@ public class RentDetailsService {
     @Autowired
     private BookRepository bookRepository;
 
-public void addRentDetails(int bookId,Rent rentId,String expiryDate,String return_date,int fineAmount){
-    Book book=bookRepository.findById(bookId);
+public void addRentDetails(int bookId,Rent rentId,String expiryDate,String return_date,int fineAmount) throws BookNotFOundException{
+    Book book=bookRepository.findById(bookId).orElseThrow(()-> new BookNotFOundException("Book Not Found"));
     BookStatus bookStatus=new BookStatus();
     bookStatus.setId(2);
     bookStatus.setBook_status("Not Available");
