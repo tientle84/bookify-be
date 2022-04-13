@@ -1,15 +1,16 @@
 package com.revature.project2.model;
 
-
 import lombok.*;
 
-@NoArgsConstructor
+import java.util.Objects;
+
 @Getter
 @Setter
 @ToString
-@EqualsAndHashCode
+@NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode
 public class LoginDTO {
-    private String emailId;
+    private String email;
     private String password;
 }

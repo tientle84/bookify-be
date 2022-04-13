@@ -3,10 +3,13 @@ package com.revature.project2.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.revature.project2.dao.UserRepository;
+import com.revature.project2.exception.UnAuthorizedResponse;
 import com.revature.project2.model.Book;
-import com.revature.project2.model.UserJwtDto;
+import com.revature.project2.model.UserJwtDTO;
 import com.revature.project2.service.BookService;
 import com.revature.project2.service.JwtService;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jws;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +21,9 @@ import java.util.List;
 @CrossOrigin(originPatterns = "*",exposedHeaders = "*",allowedHeaders = "*")
 @RequestMapping("/books")
 public class BookController {
+
+    private String authorization = "Authorization";
+    private String userRole = "user_role";
 
     @Autowired
     private BookService bookService;
@@ -38,40 +44,37 @@ public class BookController {
                            @RequestParam("publish_date") String publishDate,
                            @RequestParam("genre") String genre,
                            @RequestParam("image_url") String imageUrl
-    ) {
+    ) throws UnAuthorizedResponse {
 
         String jwt=headerValue.split(" ")[1];
         try{
-            UserJwtDto dto=jwtService.parseJwt(jwt);
-            System.out.println(dto);
-            if(dto.getUserRole().equals("liberian")){
-                Book book = new Book(isbn, title, author, publisher, publishDate, genre, "Available", imageUrl);
-                Book createdBook =  bookService.createBook(book);
-                //Book book= bookServiceImpl.addBook(isbn,title,author,publisher,date,genre);
-                return ResponseEntity.ok().body(createdBook);
+            Jws<Claims> token = jwtService.parseJwt(jwt);
+            System.out.println(token);
+
+            if(token.getBody().get(userRole).equals("renter")) {
+                throw new UnAuthorizedResponse("This endpoint is used by manager only.");
             }
-            return ResponseEntity.status(404).body("You are not Authorized to access this end point.");
-        } catch (JsonProcessingException e) {
-            return ResponseEntity.status(500).body(e.getMessage());
+
+            Book book = new Book(isbn, title, author, publisher, publishDate, genre, "Available", imageUrl);
+            Book createdBook =  bookService.createBook(book);
+            //Book book= bookServiceImpl.addBook(isbn,title,author,publisher,date,genre);
+            return ResponseEntity.ok().body(createdBook);
+
         } catch (DataIntegrityViolationException ex) {
             return ResponseEntity.status(500).body("ISBN already exists.");
         }
     }
 
     @GetMapping()
-    public ResponseEntity<?> getAllBooks(@RequestHeader("Authorization") String headerValue) {
-        String jwt=headerValue.split(" ")[1];
-        try{
-            UserJwtDto dto = jwtService.parseJwt(jwt);
-            if(dto != null){
-                List<Book> books =  bookService.getAllBooks();
-                return ResponseEntity.ok().body(books);
-            }
-
-            return ResponseEntity.status(404).body("You are not Authorized to access this end point.");
-        } catch (JsonProcessingException e) {
-            return ResponseEntity.status(500).body(e.getMessage());
+    public ResponseEntity<?> getAllBooks(@RequestHeader("Authorization") String headerValue) throws UnAuthorizedResponse {
+        String jwt = headerValue.split(" ")[1];
+        Jws<Claims> token = jwtService.parseJwt(jwt);
+        if(token != null){
+            List<Book> books =  bookService.getAllBooks();
+            return ResponseEntity.ok().body(books);
         }
+
+        return ResponseEntity.status(404).body("You are not Authorized to access this end point.");
     }
 
     @PutMapping("/{id}")
@@ -85,20 +88,18 @@ public class BookController {
                                         @RequestParam("genre") String genre,
                                         @RequestParam("status") String status,
                                         @RequestParam("image_url") String imageUrl
-    ) {
-        String jwt=headerValue.split(" ")[1];
-        try{
-            UserJwtDto dto = jwtService.parseJwt(jwt);
-            System.out.println(dto);
-            if(dto.getUserRole().equals("liberian")){
-                Book book = new Book(isbn, title, author, publisher, publishDate, genre, status, imageUrl);
-                Book updatedBook =  bookService.updateBook(id, book);
-                return ResponseEntity.ok().body(updatedBook);
-            }
-            return ResponseEntity.status(404).body("You are not authorized to access this end point.");
-        } catch (JsonProcessingException e) {
-            return ResponseEntity.status(500).body(e.getMessage());
+    ) throws UnAuthorizedResponse {
+        String jwt = headerValue.split(" ")[1];
+        Jws<Claims> token = jwtService.parseJwt(jwt);
+
+        if(token.getBody().get(userRole).equals("renter")) {
+            throw new UnAuthorizedResponse("This endpoint is used by manager only.");
         }
+
+        Book book = new Book(isbn, title, author, publisher, publishDate, genre, status, imageUrl);
+        Book updatedBook =  bookService.updateBook(id, book);
+        return ResponseEntity.ok().body(updatedBook);
+
     }
 
     @DeleteMapping("/{id}")
@@ -107,14 +108,16 @@ public class BookController {
             String jwt = headerValue.split(" ")[1];
 
             try{
-                UserJwtDto dto = jwtService.parseJwt(jwt);
-                if(dto != null && dto.getUserRole().equals("liberian")){
-                    bookService.deleteBookById(id);
-                    return ResponseEntity.ok().body("Book has been deleted successfully.");
+                Jws<Claims> token = jwtService.parseJwt(jwt);
+
+                if(token.getBody().get(userRole).equals("renter")) {
+                    throw new UnAuthorizedResponse("This endpoint is used by manager only.");
                 }
 
-                return ResponseEntity.status(403).body("You are not authorized to access this end point.");
-            } catch (JsonProcessingException e) {
+                bookService.deleteBookById(id);
+                return ResponseEntity.ok().body("Book has been deleted successfully.");
+
+            } catch (UnAuthorizedResponse e) {
                 return ResponseEntity.status(500).body(e.getMessage());
             }
 

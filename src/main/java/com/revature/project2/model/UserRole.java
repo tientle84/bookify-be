@@ -6,30 +6,31 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name="user_role")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 public class UserRole {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "userRole_id")
+    @Column(name = "user_role_id")
     private int id;
-    @Column(name="user_Role")
-    private String userRole;
+
+    @Column(name="user_role")
+    private String role;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        UserRole userRole1 = (UserRole) o;
-        return id == userRole1.id && Objects.equals(userRole, userRole1.userRole);
+        UserRole userRole = (UserRole) o;
+        return id == userRole.id && Objects.equals(role, userRole.role);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, userRole);
+        return Objects.hash(id, role);
     }
 }

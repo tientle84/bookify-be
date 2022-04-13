@@ -9,10 +9,10 @@ import lombok.*;
 @AllArgsConstructor
 @ToString
 @EqualsAndHashCode
-public class UserJwtDto {
+public class UserJwtDTO {
     private int userId;
-    private String first_name;
-    private String last_name;
+    private String firstName;
+    private String lastName;
     private String email;
     private String userRole;
 }

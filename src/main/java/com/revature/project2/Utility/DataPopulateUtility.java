@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
-import java.sql.Timestamp;
 import java.time.LocalDate;
 
 @Component
@@ -23,36 +22,46 @@ public class DataPopulateUtility {
         /*
         userRole
          */
-        UserRole liberian=new UserRole();
-        liberian.setUserRole("liberian");
-        em.persist(liberian);
+        UserRole manager = new UserRole();
+        manager.setRole("manager");
+        em.persist(manager);
 
-        UserRole bookRenter=new UserRole();
-        bookRenter.setUserRole("bookRenter");
-        em.persist(bookRenter);
+        UserRole renter = new UserRole();
+        renter.setRole("renter");
+        em.persist(renter);
 
         /*
         user
          */
-        User user1=new User();
-        user1.setEmailId("jenob@gmail.com");
-        user1.setAddress("Toronto");
+        User user1 = new User();
+        user1.setEmail("jenob@gmail.com");
         user1.setPassword("password");
-        user1.setFirst_name("jenob");
-        user1.setLast_name("job");
+        user1.setFirstName("jenob");
+        user1.setLastName("job");
+        user1.setAddress("Toronto");
         user1.setPhone("2232443434");
-        user1.setUserRole(liberian);
+        user1.setRole(manager);
         em.persist(user1);
 
-        User user2=new User();
-        user2.setEmailId("jinu@gmail.com");
-        user2.setAddress("Toronto");
-        user2.setPassword("password");
-        user2.setFirst_name("jinu");
-        user2.setLast_name("job");
-        user2.setPhone("34234234234");
-        user2.setUserRole(bookRenter);
+        User user2 = new User();
+        user2.setEmail("tienle@gmail.com");
+        user2.setPassword("123456");
+        user2.setFirstName("Tien");
+        user2.setLastName("Le");
+        user2.setAddress("123 abc");
+        user2.setPhone("4074567890");
+        user2.setRole(manager);
         em.persist(user2);
+
+        User user3 = new User();
+        user3.setEmail("johndoe@gmail.com");
+        user3.setPassword("123456");
+        user3.setFirstName("John");
+        user3.setLastName("Doe");
+        user3.setAddress("123 abc");
+        user3.setPhone("5089877890");
+        user3.setRole(renter);
+        em.persist(user3);
 
         /*
         BOOK STATUS

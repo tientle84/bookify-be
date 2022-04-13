@@ -1,46 +1,43 @@
 package com.revature.project2.model;
 
 import lombok.*;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name="User_tb")
+@Table(name="bkf_user")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="user_id")
     private int id;
 
-    @Column(name="emailId", unique = true)
-    private String emailId;
+    @Column(unique = true)
+    private String email;
 
-    @Column(name="password")
+    @Column()
     private String password;
 
-    @Column(name="first_name")
-    private String first_name;
+    @Column()
+    private String firstName;
 
-    @Column(name="last_name")
-    private String last_name;
+    @Column()
+    private String lastName;
 
-   // @JoinColumn(name="user_role")
     @ManyToOne
-    //@OnDelete(action= OnDeleteAction.CASCADE)
-    private UserRole userRole;
+    @JoinColumn(name = "role_id")
+    private UserRole role;
 
-    @Column(name="user_address")
+    @Column()
     private String address;
 
-    @Column(name="phone_number")
+    @Column()
     private String phone;
 
     @Override
@@ -48,11 +45,11 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id && Objects.equals(emailId, user.emailId) && Objects.equals(password, user.password) && Objects.equals(first_name, user.first_name) && Objects.equals(last_name, user.last_name) && Objects.equals(userRole, user.userRole) && Objects.equals(address, user.address) && Objects.equals(phone, user.phone);
+        return id == user.id && Objects.equals(email, user.email) && Objects.equals(password, user.password) && Objects.equals(firstName, user.firstName) && Objects.equals(lastName, user.lastName) && Objects.equals(role, user.role) && Objects.equals(address, user.address) && Objects.equals(phone, user.phone);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, emailId, password, first_name, last_name, userRole, address, phone);
+        return Objects.hash(id, email, password, firstName, lastName, role, address, phone);
     }
 }
