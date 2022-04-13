@@ -1,6 +1,10 @@
 # Bookify
 Bookify is an online library management web application where users can rent books for a specific amount of time and see the history for the rented books. Admins can manage books and track rent details.
-
+# Links:
+<ul>
+  <li> Frontend: https://github.com/java-gcp-220228/Bookshelf-FE.git </li>
+  <li> Backend: https://github.com/jenobpj/bookshelf1.git</li>
+</ul>
 # Technologies
 <ul>
   <li>Backend:
