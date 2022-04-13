@@ -1,25 +1,20 @@
 package com.revature.project2.controller;
 
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.revature.project2.dao.UserRepository;
 import com.revature.project2.exception.BookNotFoundException;
+import com.revature.project2.exception.FailedDeleteException;
 import com.revature.project2.exception.UnAuthorizedResponse;
 import com.revature.project2.model.Book;
 import com.revature.project2.model.BookStatus;
-import com.revature.project2.model.UserJwtDTO;
 import com.revature.project2.service.BookService;
 import com.revature.project2.service.JwtService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.MissingRequestHeaderException;
-import org.springframework.web.bind.ServletRequestBindingException;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 import java.util.List;
 
@@ -130,12 +125,13 @@ public class BookController {
 
             } catch (UnAuthorizedResponse e) {
                 return ResponseEntity.status(500).body(e.getMessage());
+            } catch (FailedDeleteException ex) {
+                return ResponseEntity.status(500).body(ex.getMessage());
             }
         } else {
             return ResponseEntity.status(400).body("You have to login to use this function.");
         }
     }
-
 
     @GetMapping("{id}")
     public ResponseEntity<?> getBookById(@PathVariable String id) {

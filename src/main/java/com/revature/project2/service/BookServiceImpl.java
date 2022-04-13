@@ -2,6 +2,7 @@ package com.revature.project2.service;
 
 import com.revature.project2.dao.BookRepository;
 import com.revature.project2.exception.BookNotFoundException;
+import com.revature.project2.exception.FailedDeleteException;
 import com.revature.project2.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,7 +33,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book updateBook(int id, Book book) {
-        Book targetBook = bookRepository.findById(id).get();
+        Book targetBook = bookRepository.findById(id).orElseThrow(() -> new BookNotFoundException("Book not found."));
 
         targetBook.setIsbn(book.getIsbn());
         targetBook.setTitle(book.getTitle());
@@ -48,36 +49,12 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public void deleteBookById(int id) {
-        bookRepository.deleteById(id);
+        Book targetBook = bookRepository.findById(id).orElseThrow(() -> new BookNotFoundException("Book not found."));
+
+        if(targetBook.getStatus().getStatus().equals("Available")) {
+            bookRepository.deleteById(id);
+        } else {
+            throw new FailedDeleteException("Could not delete a book has been rented.");
+        }
     }
-
-
-//    public Book addBook(MultipartFile file, String isbn, String title, String author, String publisher, String date,
-//                        String genre){
-//
-//        Book b=new Book();
-//        String fileName= StringUtils.cleanPath(file.getOriginalFilename());
-//        if(fileName.contains("..")){
-//            System.out.println("not a valid file");
-//        }
-//        try{
-//            b.setImage_url(Base64.getEncoder().encodeToString(file.getBytes()));
-//        }catch (IOException e){
-//            e.printStackTrace();
-//        }
-//        b.setIsbn(isbn);
-//        b.setTitle(title);
-//        b.setAuthor(author);
-//        b.setPublisher(publisher);
-//        b.setPublish_date(date);
-//        b.setGenre(genre);
-//
-//        BookStatus status=new BookStatus(1,"Available");
-//        b.setBookStatus(status);
-//        Book newBook=bookRepository.save(b);
-//        return  newBook;
-//    }
-
-
-
 }
