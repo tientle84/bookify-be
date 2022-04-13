@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
-import java.time.LocalDate;
 
 @Component
 public class DataPopulateUtility {
@@ -63,44 +62,71 @@ public class DataPopulateUtility {
         user3.setRole(renter);
         em.persist(user3);
 
-        /*
-        BOOK STATUS
-         */
-        BookStatus bookStatus1=new BookStatus();
-        bookStatus1.setBook_status("Available");
+        /* BOOK STATUS */
+
+        BookStatus bookStatus1 = new BookStatus();
+        bookStatus1.setStatus("Available");
         em.persist(bookStatus1);
 
-        BookStatus bookStatus2=new BookStatus();
-        bookStatus2.setBook_status("Not Available");
+        BookStatus bookStatus2 = new BookStatus();
+        bookStatus2.setStatus("Not Available");
         em.persist(bookStatus2);
 
-        /*
-        * ----------------Books----------
-        * */
+        /* BOOK */
+
         Book book = new Book();
-        book.setAuthor("Robin Sharma");
-        book.setGenre("self Help");
-        book.setIsbn("978-3-16-148410-0");
-        book.setPublishDate(String.valueOf((String.valueOf(LocalDate.of(2018,12,04)))));
-        book.setImageUrl("https://www.robinsharma.com/files/img/book/9156802291265ef1ee1f6720f3ab8bc0.png");
-        book.setPublisher("HapperCollins");
-        book.setTitle("The 5 Am Club");
-        //book.setStatus(bookStatus1);
-        book.setStatus("Available");
+        book.setIsbn("0373761228");
+        book.setTitle("Boss, The Beauty, And The Bargain");
+        book.setAuthor("Judith McWilliams");
+        book.setPublisher("Silhouette");
+        book.setPublishDate("01/12/1997");
+        book.setGenre("Fiction");
+        book.setImageUrl("https://covers.openlibrary.org/b/id/220453-L.jpg");
+        book.setStatus(bookStatus1);
         em.persist(book);
 
         Book book1 = new Book();
-        book1.setAuthor("Karen Swan");
-        book1.setGenre("Romance novel");
-        book1.setIsbn("978-1-50-984062-5");
-        book1.setPublishDate(String.valueOf((String.valueOf(LocalDate.of(2018,04,24)))));
-        book1.setImageUrl("https://www.robinsharma.com/files/img/book/9156802291265ef1ee1f6720f3ab8bc0.png");
-        book1.setPublisher("Pan Macmillan");
-        book1.setTitle("The Greek Escape");
-        //book1.setBookStatus(bookStatus2);
-        book.setStatus("Available");
+        book1.setIsbn("0262540290");
+        book1.setTitle("Primer of visual literacy");
+        book1.setAuthor("Donis A. Dondis");
+        book1.setPublisher("MIT Press");
+        book1.setPublishDate("1974");
+        book1.setGenre("Technique");
+        book1.setImageUrl("https://covers.openlibrary.org/b/id/6257679-L.jpg");
+        book1.setStatus(bookStatus1);
         em.persist(book1);
 
-    }
+        Book book2 = new Book();
+        book2.setIsbn("0373198094");
+        book2.setTitle("The Matchmaking Machine");
+        book2.setAuthor("Judith McWilliams");
+        book2.setPublisher("Silhouette");
+        book2.setPublishDate("03/12/2006");
+        book2.setGenre("Romance");
+        book2.setImageUrl("https://covers.openlibrary.org/b/id/215776-L.jpg");
+        book2.setStatus(bookStatus1);
+        em.persist(book2);
 
+        Book book3 = new Book();
+        book3.setIsbn("0373761229");
+        book3.setTitle("Your perfect right");
+        book3.setAuthor("Robert E. Alberti");
+        book3.setPublisher("Impact");
+        book3.setPublishDate("1974");
+        book3.setGenre("Communication");
+        book3.setImageUrl("https://covers.openlibrary.org/b/id/9839075-L.jpg");
+        book3.setStatus(bookStatus1);
+        em.persist(book3);
+
+        Book book4 = new Book();
+        book4.setIsbn("0373761252");
+        book4.setTitle("Lolita");
+        book4.setAuthor("Vladimir Nabokov");
+        book4.setPublisher("Caedmon");
+        book4.setPublishDate("1981");
+        book4.setGenre("Fiction");
+        book4.setImageUrl("https://covers.openlibrary.org/b/id/10522912-L.jpg");
+        book4.setStatus(bookStatus2);
+        em.persist(book4);
+    }
 }

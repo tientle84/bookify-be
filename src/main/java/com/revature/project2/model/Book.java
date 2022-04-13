@@ -39,14 +39,16 @@ public class Book {
     @Column(name="genre")
     private String genre;
 
-    @Column(name="status", columnDefinition = "varchar(50) default 'Available'", insertable = false)
+    //@Column(name="status", columnDefinition = "varchar(50) default 'Available'", insertable = false)
     //@ColumnDefault("Available")
-    private String status;
+    @ManyToOne
+    @JoinColumn(name = "status_id")
+    private BookStatus status;
 
     @Column(name="image_url")
     private String imageUrl;
 
-    public Book(String isbn, String title, String author, String publisher, String publishDate, String genre, String status, String imageUrl) {
+    public Book(String isbn, String title, String author, String publisher, String publishDate, String genre, BookStatus status, String imageUrl) {
         this.isbn = isbn;
         this.title = title;
         this.author = author;

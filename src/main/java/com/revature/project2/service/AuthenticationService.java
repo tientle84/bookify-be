@@ -34,8 +34,13 @@ public class AuthenticationService {
             byte[] hash = secretKeyFactory.generateSecret(keySpec).getEncoded();
             String passwordHash = new String(hash, StandardCharsets.UTF_8);
 
-            return userRepository.findByEmailAndPassword(email.trim(), passwordHash);
-        } catch (NoSuchAlgorithmException | InvalidKeySpecException | DataIntegrityViolationException e) {
+            User user = userRepository.findByEmailAndPassword(email.trim(), passwordHash);
+            if(user == null) {
+                throw new FailedLoginException("Invalid username and/or password.");
+            }
+
+            return user;
+        } catch (NoSuchAlgorithmException | InvalidKeySpecException | DataIntegrityViolationException | NullPointerException e) {
             throw new FailedLoginException("Invalid username and/or password.");
         }
     }
