@@ -1,18 +1,39 @@
 # Bookify
+Bookify is an online library management web application where users can rent books for a specific amount of time and see the history for the rented books. Admins can manage books and track rent details.
 
-#Technologies
-<p> Bookify will manage the process of renting books of various authors while being a registered customer of the system.
-  All registered customers can login and rent books and view their past rented books.
- Librarian can log in and view all rent request and past history for all customers within the system.
-  Librarians are authorized to approve and deny requests for books that are to be rented.</p>
+# Technologies
 <ul>
-  <li>Spring Framework</li>
-  <li>Hibernate or Spring Data JPA</li>
-  <li>Logback</li>
-  <li>JUnit, mockito, jaCoCo gradle plugin, sonarCloud</li>
+  <li>Backend:
+    <ul> 
+    <li>Spring Framework</li>
+    <li>Hibernate, Spring Data JPA</li>
+    <li>Logback</li>
+    <li>JUnit, mockito, jaCoCo gradle plugin, sonarCloud</li>
+    </ul>
+  </li>
+  <li>Frontend:
+    <ul> 
+    <li>Angular</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>TypeScript</li>
+    <li>Jasmine</li>
+    </ul>
+  </li>
+   <li>Version Control:
+    <ul> 
+    <li>Git</li>
+    </ul>
+  </li>
+   <li>Cloud:
+    <ul> 
+    <li>GCP Cloud SQL</li>
+    <li>GCP Compute Engine</li>
+    </ul>
+  </li>
 </ul>
 
-#Required features
+# Features
 <ul>
   <li>Create account (user)</li>
   <li>login to account</li>
@@ -24,4 +45,16 @@
   <li>track books that are borrow/rented (admin)</li>
   <li>returned book status (admin)</li>
   <li>rent expired report (admin)</li>
+</ul>
+
+# Getting Started
+
+# Usage
+
+# Contributer
+<u>
+  <li> Garrett McPherson</li>
+  <li> Jenob Job</li>
+  <li> Monika Solanki (Ayesha)</li>
+  <li> Tien Le </li>
 </ul>
