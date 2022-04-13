@@ -1,6 +1,7 @@
 package com.revature.project2.model;
 
 import lombok.*;
+import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
@@ -18,10 +19,9 @@ import java.util.Objects;
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="book_id")
-    private int book_id;
+    private int id;
 
-    @Column(name="isbn")
+    @Column(name="isbn", unique = true)
     private String isbn;
 
     @Column(name = "title")
@@ -34,30 +34,39 @@ public class Book {
     private String publisher;
 
     @Column(name="publish_date")
-    private String publish_date;
-
-    @Lob
-    @Column(name="image_url")
-    private  String image_url;
+    private String publishDate;
 
     @Column(name="genre")
     private String genre;
 
-   // @JoinColumn(name="book_status")
-    @ManyToOne
-    //@OnDelete(action = OnDeleteAction.CASCADE)
-    private BookStatus bookStatus;
+    @Column(name="status", columnDefinition = "varchar(50) default 'Available'", insertable = false)
+    //@ColumnDefault("Available")
+    private String status;
+
+    @Column(name="image_url")
+    private String imageUrl;
+
+    public Book(String isbn, String title, String author, String publisher, String publishDate, String genre, String status, String imageUrl) {
+        this.isbn = isbn;
+        this.title = title;
+        this.author = author;
+        this.publisher = publisher;
+        this.publishDate = publishDate;
+        this.genre = genre;
+        this.status = status;
+        this.imageUrl = imageUrl;
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return book_id == book.book_id && Objects.equals(isbn, book.isbn) && Objects.equals(title, book.title) && Objects.equals(author, book.author) && Objects.equals(publisher, book.publisher) && Objects.equals(publish_date, book.publish_date) && Objects.equals(image_url, book.image_url) && Objects.equals(genre, book.genre) && Objects.equals(bookStatus, book.bookStatus);
+        return id == book.id && Objects.equals(isbn, book.isbn) && Objects.equals(title, book.title) && Objects.equals(author, book.author) && Objects.equals(publisher, book.publisher) && Objects.equals(publishDate, book.publishDate) && Objects.equals(genre, book.genre) && Objects.equals(status, book.status) && Objects.equals(imageUrl, book.imageUrl);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(book_id, isbn, title, author, publisher, publish_date, image_url, genre, bookStatus);
+        return Objects.hash(id, isbn, title, author, publisher, publishDate, genre, status, imageUrl);
     }
 }

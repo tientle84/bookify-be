@@ -72,22 +72,24 @@ public class DataPopulateUtility {
         book.setAuthor("Robin Sharma");
         book.setGenre("self Help");
         book.setIsbn("978-3-16-148410-0");
-        book.setPublish_date(String.valueOf((String.valueOf(LocalDate.of(2018,12,04)))));
-        book.setImage_url("https://www.robinsharma.com/files/img/book/9156802291265ef1ee1f6720f3ab8bc0.png");
+        book.setPublishDate(String.valueOf((String.valueOf(LocalDate.of(2018,12,04)))));
+        book.setImageUrl("https://www.robinsharma.com/files/img/book/9156802291265ef1ee1f6720f3ab8bc0.png");
         book.setPublisher("HapperCollins");
         book.setTitle("The 5 Am Club");
-        book.setBookStatus(bookStatus1);
+        //book.setStatus(bookStatus1);
+        book.setStatus("Available");
         em.persist(book);
 
         Book book1 = new Book();
         book1.setAuthor("Karen Swan");
         book1.setGenre("Romance novel");
         book1.setIsbn("978-1-50-984062-5");
-        book1.setPublish_date(String.valueOf((String.valueOf(LocalDate.of(2018,04,24)))));
-        book1.setImage_url("https://www.robinsharma.com/files/img/book/9156802291265ef1ee1f6720f3ab8bc0.png");
+        book1.setPublishDate(String.valueOf((String.valueOf(LocalDate.of(2018,04,24)))));
+        book1.setImageUrl("https://www.robinsharma.com/files/img/book/9156802291265ef1ee1f6720f3ab8bc0.png");
         book1.setPublisher("Pan Macmillan");
         book1.setTitle("The Greek Escape");
-        book1.setBookStatus(bookStatus2);
+        //book1.setBookStatus(bookStatus2);
+        book.setStatus("Available");
         em.persist(book1);
 
     }

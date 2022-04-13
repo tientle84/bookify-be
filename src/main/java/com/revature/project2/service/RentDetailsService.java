@@ -19,21 +19,21 @@ public class RentDetailsService {
     @Autowired
     private BookRepository bookRepository;
 
-public void addRentDetails(int bookId,Rent rentId,String expiryDate,String return_date,int fineAmount) throws BookNotFOundException{
-    Book book=bookRepository.findById(bookId).orElseThrow(()-> new BookNotFOundException("Book Not Found"));
-    BookStatus bookStatus=new BookStatus();
-    bookStatus.setId(2);
-    bookStatus.setBook_status("Not Available");
-    book.setBookStatus(bookStatus);
-    Book newBook=bookRepository.save(book);
-
-    RentDetails rentDetails=new RentDetails();
-    rentDetails.setBook_id(newBook);
-    rentDetails.setRent_id(rentId);
-    rentDetails.setExpiry_date(expiryDate);
-    rentDetails.setReturn_date(return_date);
-    rentDetails.setFinal_amount(fineAmount);
-    rentDetailsRepository.save(rentDetails);
-
-}
+//public void addRentDetails(int bookId,Rent rentId,String expiryDate,String return_date,int fineAmount) throws BookNotFOundException{
+//    Book book=bookRepository.findById(bookId).orElseThrow(()-> new BookNotFOundException("Book Not Found"));
+//    BookStatus bookStatus=new BookStatus();
+//    bookStatus.setId(2);
+//    bookStatus.setBook_status("Not Available");
+//    book.setBookStatus(bookStatus);
+//    Book newBook=bookRepository.save(book);
+//
+//    RentDetails rentDetails=new RentDetails();
+//    rentDetails.setBook_id(newBook);
+//    rentDetails.setRent_id(rentId);
+//    rentDetails.setExpiry_date(expiryDate);
+//    rentDetails.setReturn_date(return_date);
+//    rentDetails.setFinal_amount(fineAmount);
+//    rentDetailsRepository.save(rentDetails);
+//
+//}
 }
