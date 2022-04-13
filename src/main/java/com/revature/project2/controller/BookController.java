@@ -19,6 +19,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MissingRequestHeaderException;
 import org.springframework.web.bind.ServletRequestBindingException;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 import java.util.List;
 
@@ -130,7 +131,6 @@ public class BookController {
             } catch (UnAuthorizedResponse e) {
                 return ResponseEntity.status(500).body(e.getMessage());
             }
-
         } else {
             return ResponseEntity.status(400).body("You have to login to use this function.");
         }
@@ -138,20 +138,17 @@ public class BookController {
 
 
     @GetMapping("{id}")
-    public ResponseEntity<?> getBookById(@PathVariable Integer id) {
-        if(id == null) {
-            throw new BookNotFoundException("Invalid book id : " + id);
+    public ResponseEntity<?> getBookById(@PathVariable String id) {
+        int intId;
+
+        try {
+            intId = Integer.parseInt(id);
+            Book book = bookService.getBookById(intId);
+            return ResponseEntity.ok().body(book);
+        } catch (BookNotFoundException bnfException) {
+            return ResponseEntity.status(400).body(bnfException.getMessage());
+        } catch (NumberFormatException e) {
+            return ResponseEntity.status(400).body("Invalid book id was provided.");
         }
-
-        Book book = bookService.getBookById(id);
-        return ResponseEntity.ok().body(book);
-
-//        try {
-//            Book book = bookService.getBookById(id);
-//
-//            return ResponseEntity.ok().body(book);
-//        } catch (Exception e) {
-//            return ResponseEntity.status(404).body(e.getMessage());
-//        }
     }
 }
