@@ -1,14 +1,12 @@
 package com.revature.project2.Utility;
 
-import com.revature.project2.model.Book;
-import com.revature.project2.model.BookStatus;
-import com.revature.project2.model.User;
-import com.revature.project2.model.UserRole;
+import com.revature.project2.model.*;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
+import java.time.LocalDate;
 
 @Component
 public class DataPopulateUtility {
@@ -61,6 +59,16 @@ public class DataPopulateUtility {
         user3.setPhone("5089877890");
         user3.setRole(renter);
         em.persist(user3);
+
+        User user4 = new User();
+        user4.setEmail("janedoe@gmail.com");
+        user4.setPassword("�\f!y=zc:��Y:�LKp");
+        user4.setFirstName("Jane");
+        user4.setLastName("Doe");
+        user4.setAddress("1234 xyz");
+        user4.setPhone("9998884561");
+        user4.setRole(renter);
+        em.persist(user4);
 
         /* BOOK STATUS */
 
@@ -128,5 +136,19 @@ public class DataPopulateUtility {
         book4.setImageUrl("https://covers.openlibrary.org/b/id/10522912-L.jpg");
         book4.setStatus(bookStatus2);
         em.persist(book4);
+
+        /* RENT */
+
+        Rent rent1 = new Rent();
+        rent1.setDate(LocalDate.now());
+        rent1.setManager(user1);
+        rent1.setRenter(user3);
+        em.persist(rent1);
+
+        Rent rent2 = new Rent();
+        rent2.setDate(LocalDate.now());
+        rent2.setManager(user1);
+        rent2.setRenter(user4);
+        em.persist(rent2);
     }
 }

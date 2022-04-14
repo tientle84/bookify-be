@@ -35,7 +35,6 @@ public class BookController {
     @Autowired
     private JwtService jwtService;
 
-
     @PostMapping()
     public ResponseEntity<?> createBook(@RequestHeader("Authorization") String headerValue,
                            @RequestParam("isbn") String isbn,
@@ -51,7 +50,6 @@ public class BookController {
 
             try{
                 Jws<Claims> token = jwtService.parseJwt(jwt);
-                System.out.println(token);
 
                 if(token.getBody().get(userRole).equals("renter")) {
                     throw new UnAuthorizedResponse("This endpoint is used by manager only.");
@@ -59,7 +57,6 @@ public class BookController {
 
                 // new added book has default Available status
                 BookStatus status = new BookStatus(1, "Available");
-                System.out.println(status);
 
                 Book book = new Book(isbn, title, author, publisher, publishDate, genre, status, imageUrl);
                 Book createdBook =  bookService.createBook(book);
@@ -133,7 +130,7 @@ public class BookController {
         }
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<?> getBookById(@PathVariable String id) {
         int intId;
 

@@ -1,17 +1,11 @@
 package com.revature.project2.dao;
 
 import com.revature.project2.model.Book;
-import com.revature.project2.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-    public interface BookRepository extends JpaRepository<Book,Integer> {
+public interface BookRepository extends JpaRepository<Book,Integer> {
 
-        //public abstract List<Book> findAll();
-     /*   public abstract Book findById(int id) throws Exception;*/
-
-
-    }
+}
 
