@@ -40,7 +40,11 @@ public class BookServiceImpl implements BookService {
         targetBook.setAuthor(book.getAuthor());
         targetBook.setPublisher(book.getPublisher());
         targetBook.setPublishDate(book.getPublishDate());
-        targetBook.setStatus(book.getStatus());
+
+        // we don't arbitrary update the book status
+        // we only update the book status when the book has been rented or returned
+        //targetBook.setStatus(book.getStatus());
+
         targetBook.setGenre(book.getGenre());
         targetBook.setImageUrl(book.getImageUrl());
 

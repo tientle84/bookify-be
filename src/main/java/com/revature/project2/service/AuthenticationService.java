@@ -5,6 +5,7 @@ import com.revature.project2.exception.BadParameterException;
 import com.revature.project2.exception.FailedLoginException;
 import com.revature.project2.exception.FailedRegisterException;
 import com.revature.project2.model.User;
+import com.revature.project2.model.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
@@ -54,6 +55,8 @@ public class AuthenticationService {
            String passwordHash = new String(hash, StandardCharsets.UTF_8);
            user.setPassword(passwordHash);
 
+           UserRole userRole = new UserRole(2, "renter");
+           user.setRole(userRole);
            return userRepository.save(user);
        } catch (NoSuchAlgorithmException | InvalidKeySpecException e) {
            throw new FailedRegisterException("Fail to register user.");

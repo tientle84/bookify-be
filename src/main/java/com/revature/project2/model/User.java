@@ -23,7 +23,7 @@ public class User {
     private String email;
 
     @Column()
-    @JsonIgnore
+    //@JsonIgnore
     private String password;
 
     @Column()

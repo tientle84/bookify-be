@@ -36,15 +36,7 @@ public class BookController {
     private JwtService jwtService;
 
     @PostMapping()
-    public ResponseEntity<?> createBook(@RequestHeader("Authorization") String headerValue,
-                           @RequestParam("isbn") String isbn,
-                           @RequestParam("title") String title,
-                           @RequestParam("author") String author,
-                           @RequestParam("publisher") String publisher,
-                           @RequestParam("publish_date") String publishDate,
-                           @RequestParam("genre") String genre,
-                           @RequestParam("image_url") String imageUrl
-    ) throws UnAuthorizedResponse {
+    public ResponseEntity<?> createBook(@RequestHeader("Authorization") String headerValue, @RequestBody Book book) throws UnAuthorizedResponse {
         if(!headerValue.equals(null) && !headerValue.equals("")) {
             String jwt = headerValue.split(" ")[1];
 
@@ -58,8 +50,9 @@ public class BookController {
                 // new added book has default Available status
                 BookStatus status = new BookStatus(1, "Available");
 
-                Book book = new Book(isbn, title, author, publisher, publishDate, genre, status, imageUrl);
-                Book createdBook =  bookService.createBook(book);
+                //Book book = new Book(isbn, title, author, publisher, publishDate, genre, status, imageUrl);
+                book.setStatus(status);
+                Book createdBook = bookService.createBook(book);
                 return ResponseEntity.ok().body(createdBook);
 
             } catch (DataIntegrityViolationException ex) {
