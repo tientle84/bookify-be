@@ -48,14 +48,4 @@ public class RentServiceImpl implements RentService{
         List<Rent> rents = rentRepository.findAllByRenterId(render.getId());
         return rents;
     }
-
-//    @Override
-//    public Rent updateRent(int id, Rent rent) {
-//        return null;
-//    }
-//
-//    @Override
-//    public void deleteRentById(int rentId) {
-//
-//    }
 }

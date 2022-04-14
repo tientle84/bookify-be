@@ -4,14 +4,13 @@ import lombok.*;
 
 import java.util.List;
 
+@NoArgsConstructor
 @Getter
 @Setter
 @ToString
-@NoArgsConstructor
-@AllArgsConstructor
 @EqualsAndHashCode
-public class RentDTO {
-    private int managerId;
-    private int renterId;
+@AllArgsConstructor
+public class RentDetailDTO {
+    private int rentId;
     private List<Integer> bookIds;
 }

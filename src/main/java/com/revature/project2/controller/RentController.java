@@ -4,15 +4,19 @@ import com.revature.project2.dao.UserRepository;
 import com.revature.project2.exception.UnAuthorizedResponse;
 import com.revature.project2.model.Rent;
 import com.revature.project2.model.RentDTO;
+import com.revature.project2.model.RentDetail;
 import com.revature.project2.service.JwtService;
+import com.revature.project2.service.RentDetailService;
 import com.revature.project2.service.RentService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -24,10 +28,10 @@ public class RentController {
     private RentService rentService;
 
     @Autowired
-    UserRepository userRepository;
+    private RentDetailService rentDetailService;
 
-//    @Autowired
-//    private RentDetailsService rentDetailsService;
+    @Autowired
+    UserRepository userRepository;
     
     @Autowired
     private JwtService jwtService;
@@ -57,7 +61,7 @@ public class RentController {
             String jwt = headerValue.split(" ")[1];
             Jws<Claims> token = jwtService.parseJwt(jwt);
             if(token != null){
-                List<Rent> rents =  rentService.getAllRentsByRenterId(id);
+                List<Rent> rents = rentService.getAllRentsByRenterId(id);
                 return ResponseEntity.ok().body(rents);
             }
 
@@ -77,7 +81,18 @@ public class RentController {
                 Jws<Claims> token = jwtService.parseJwt(jwt);
 
                 if(token != null) {
-                    Rent createdRent =  rentService.createRent(rentDto);
+                    // create rent
+                    Rent createdRent = rentService.createRent(rentDto);
+
+                    // create rent detail
+                    LocalDate expiryDate = LocalDate.now().plusDays(15);
+                    List<Integer> bookIds = rentDto.getBookIds();
+                    for(int bookId : bookIds) {
+                        rentDetailService.createRentDetail(createdRent, bookId, expiryDate);
+                    }
+
+                    // TODO update book status to Unavailable
+
                     return ResponseEntity.ok().body(createdRent);
                 }
 
