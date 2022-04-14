@@ -5,6 +5,7 @@ import com.revature.project2.dao.RentDetailRepository;
 import com.revature.project2.dao.RentRepository;
 import com.revature.project2.dao.UserRepository;
 import com.revature.project2.model.Book;
+import com.revature.project2.model.BookStatus;
 import com.revature.project2.model.Rent;
 import com.revature.project2.model.RentDetail;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,15 @@ public class RentDetailServiceImpl implements RentDetailService {
     @Override
     public void createRentDetail(Rent rent, int bookId, LocalDate expiryDate) {
 
+        // pull the book from database
         Book book = bookRepository.findById(bookId).get();
+
+        // update book status to Not Available
+        BookStatus bookStatus = new BookStatus(2, "Not Available");
+        book.setStatus(bookStatus);
+        bookRepository.save(book);
+
+        // create rent detail
         RentDetail rentDetail = new RentDetail(rent, book, expiryDate, null, 0);
         rentDetailRepository.save(rentDetail);
     }

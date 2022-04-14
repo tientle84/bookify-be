@@ -91,8 +91,6 @@ public class RentController {
                         rentDetailService.createRentDetail(createdRent, bookId, expiryDate);
                     }
 
-                    // TODO update book status to Unavailable
-
                     return ResponseEntity.ok().body(createdRent);
                 }
 
