@@ -1,5 +1,6 @@
 package com.revature.project2.controller;
 
+import com.revature.project2.exception.FailedDeleteException;
 import com.revature.project2.exception.UnAuthorizedResponse;
 import com.revature.project2.model.Rent;
 import com.revature.project2.model.RentDetail;
@@ -43,4 +44,29 @@ public class RentDetailController {
         }
     }
 
+    @PostMapping("/{id}")
+    public ResponseEntity<?> returnBookByRentDetailId(@RequestHeader("Authorization") String headerValue, @PathVariable int id) throws UnAuthorizedResponse {
+        if(!headerValue.equals(null) && !headerValue.equals("")) {
+            String jwt = headerValue.split(" ")[1];
+
+            try{
+                Jws<Claims> token = jwtService.parseJwt(jwt);
+
+                if(token.getBody().get("user_role").equals("renter")) {
+                    throw new UnAuthorizedResponse("This endpoint is used by manager only.");
+                }
+
+                rentDetailService.returnBookByRentDetailId(id);
+                return ResponseEntity.ok().body("Book has been returned successfully.");
+
+            } catch (UnAuthorizedResponse e) {
+                return ResponseEntity.status(500).body(e.getMessage());
+            } catch (FailedDeleteException ex) {
+                return ResponseEntity.status(500).body(ex.getMessage());
+            }
+
+        } else {
+            return ResponseEntity.status(400).body("You have to login to use this function.");
+        }
+    }
 }

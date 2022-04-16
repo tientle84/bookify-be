@@ -103,29 +103,4 @@ public class RentController {
             return ResponseEntity.status(400).body("You have to login to use this function.");
         }
     }
-    
-
-//    @PostMapping("/rent_details")
-//    public ResponseEntity<?> rent_details(@RequestHeader("Authorization") String headerValue,
-//                                          @RequestBody List<RentDetailsDto> rentDetailsDto) {
-//
-//        String jwt=headerValue.split(" ")[1];
-//        try{
-//            UserJwtDto dto=jwtService.parseJwt(jwt);
-//            System.out.println(dto);
-//            if(dto.getUserRole().equals("rentRenter")){
-//                Rent rent=rentService.addRent(dto.getUserId());
-//                for(RentDetailsDto rentDetails:rentDetailsDto){
-//                    rentDetailsService.addRentDetails(rentDetails.getRent_id(),rent,rentDetails.getExpiry_date(),rentDetails.getReturn_date(),rentDetails.getAmount());
-//
-//                }
-//                return ResponseEntity.ok().body("Added");
-//            }
-//            return ResponseEntity.status(404).body("You are not Authorized to access this end point ");
-//        } catch (JsonProcessingException | RentNotFOundException e) {
-//            return ResponseEntity.status(500).body(e.getMessage());
-//        }
-//
-//    }
-
 }

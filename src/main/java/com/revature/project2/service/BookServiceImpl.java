@@ -58,7 +58,7 @@ public class BookServiceImpl implements BookService {
         if(targetBook.getStatus().getStatus().equals("Available")) {
             bookRepository.deleteById(id);
         } else {
-            throw new FailedDeleteException("Could not delete a book has been rented.");
+            throw new FailedDeleteException("The currently rented book cannot be deleted.");
         }
     }
 }

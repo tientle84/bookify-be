@@ -52,4 +52,30 @@ public class RentDetailServiceImpl implements RentDetailService {
         return rentDetails;
     }
 
+    @Override
+    public void returnBookByRentDetailId(int rentDetailId) {
+        // pull the rent detail
+        RentDetail rentDetail = rentDetailRepository.findById(rentDetailId).get();
+
+        // get the book from rent detail and set the Available status for it
+        Book targetBook = rentDetail.getBook();
+        targetBook.setStatus(new BookStatus(1, "Available"));
+        bookRepository.save(targetBook);
+
+        // calculate fine amount if applicable
+        double fineAmount = calculateFineAmount(rentDetail.getExpiryDate(), LocalDate.now());
+
+        // then update the rent detail
+        rentDetail.setFineAmount(fineAmount);
+        rentDetail.setReturnDate(LocalDate.now());
+        rentDetailRepository.save(rentDetail);
+    }
+
+    public double calculateFineAmount(LocalDate expiryDate, LocalDate returnDate) {
+        if(returnDate.isAfter(expiryDate)) {
+            return returnDate.compareTo(expiryDate) * 2; // fine amount will be 2$/1 day
+        } else {
+            return 0;
+        }
+    }
 }
