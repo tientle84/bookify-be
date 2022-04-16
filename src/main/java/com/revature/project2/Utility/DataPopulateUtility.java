@@ -1,12 +1,14 @@
 package com.revature.project2.Utility;
 
-import com.revature.project2.model.*;
+import com.revature.project2.model.Book;
+import com.revature.project2.model.BookStatus;
+import com.revature.project2.model.User;
+import com.revature.project2.model.UserRole;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
-import java.time.LocalDate;
 
 @Component
 public class DataPopulateUtility {
@@ -82,73 +84,24 @@ public class DataPopulateUtility {
 
         /* BOOK */
 
-        Book book = new Book();
-        book.setIsbn("0373761228");
-        book.setTitle("Boss, The Beauty, And The Bargain");
-        book.setAuthor("Judith McWilliams");
-        book.setPublisher("Silhouette");
-        book.setPublishDate("01/12/1997");
-        book.setGenre("Fiction");
-        book.setImageUrl("https://covers.openlibrary.org/b/id/220453-L.jpg");
-        book.setStatus(bookStatus1);
-        em.persist(book);
+        Book book1 = new Book("0373761228", "Boss, The Beauty, And The Bargain", "Judith McWilliams", "Silhouette", "01/12/1997", "Fiction", bookStatus1, "https://covers.openlibrary.org/b/id/220453-L.jpg");
+        Book book2 = new Book("0262540290", "Primer of visual literacy", "Donis A. Dondis", "MIT Press", "1974", "Technique", bookStatus1, "https://covers.openlibrary.org/b/id/6257679-L.jpg");
+        Book book3 = new Book("0373198094", "The Matchmaking Machine", "Judith McWilliams", "Silhouette", "03/12/2006", "Romance", bookStatus1, "https://covers.openlibrary.org/b/id/215776-L.jpg");
+        Book book4 = new Book("0373761229", "Your perfect right", "Robert E. Alberti", "Impact", "1974", "Communication", bookStatus1, "https://covers.openlibrary.org/b/id/9839075-L.jpg");
+        Book book5 = new Book("0373761252", "Lolita", "Vladimir Nabokov", "Caedmon", "1981", "Fiction", bookStatus1, "https://covers.openlibrary.org/b/id/10522912-L.jpg");
+        Book book6 = new Book("0397317832", "Deadwood City", "Edward Packard", "Bantam Books", "1978", "Fiction", bookStatus1, "https://covers.openlibrary.org/b/id/12703853-M.jpg");
+        Book book7 = new Book("0340893656", "Naughtiest Girl Collection", "Enid Blyton", "Hodder Children's Books", "10/14/2004", "Fiction", bookStatus1, "https://covers.openlibrary.org/b/id/2403588-M.jpg");
+        Book book8 = new Book("0063038366", "Not Here to Be Liked", "Michelle Quach", "Katherine Tegen Books", "10/19/2021", "Children's fiction", bookStatus1, "https://covers.openlibrary.org/b/id/12317857-M.jpg");
+        Book book9 = new Book("0747542988", "Harry Potter and the Philosopher's Stone", "J. K. Rowling", "Bloomsbury", "1998", "Juvenile fiction", bookStatus1, "https://covers.openlibrary.org/b/id/10521270-M.jpg");
+        Book book10 = new Book("0380800829", "The Duke and I", "Julia Quinn", "Avon Books, Inc.", "2000", "Romance", bookStatus1, "https://covers.openlibrary.org/b/id/10548994-M.jpg");
+        Book book11 = new Book("8498381452", "Harry Potter y las Reliquias de la Muerte", "J. K. Rowling", "Salamandra", "02/2008", "Fiction", bookStatus1, "https://covers.openlibrary.org/b/id/8259297-M.jpg");
+        Book book12 = new Book("0974571725", "You Were Born Rich", "Napoleon Hill", "www.AsAManThinkith.net", "2003", "Finance", bookStatus1, "https://covers.openlibrary.org/b/id/8575723-M.jpg");
+        Book book13 = new Book("0439136350", "Harry Potter and the Prisoner of Azkaban", "J. K. Rowling", "Arthur A. Levine Books", "2007", "Fiction", bookStatus1, "https://covers.openlibrary.org/b/id/12025581-M.jpg");
+        Book book14 = new Book("0810994550", "Diary of a Wimpy Kid", "Jeff Kinney", "Amulet Books", "2007", "Fiction", bookStatus1, "https://covers.openlibrary.org/b/id/6969303-M.jpg");
+        Book book15 = new Book("0671772465", "How To Win Friends and Influence People", "Dale Carnegie", "Pocket", "06/20/1970", "Business", bookStatus1, "https://covers.openlibrary.org/b/id/8231858-M.jpg");
 
-        Book book1 = new Book();
-        book1.setIsbn("0262540290");
-        book1.setTitle("Primer of visual literacy");
-        book1.setAuthor("Donis A. Dondis");
-        book1.setPublisher("MIT Press");
-        book1.setPublishDate("1974");
-        book1.setGenre("Technique");
-        book1.setImageUrl("https://covers.openlibrary.org/b/id/6257679-L.jpg");
-        book1.setStatus(bookStatus1);
-        em.persist(book1);
-
-        Book book2 = new Book();
-        book2.setIsbn("0373198094");
-        book2.setTitle("The Matchmaking Machine");
-        book2.setAuthor("Judith McWilliams");
-        book2.setPublisher("Silhouette");
-        book2.setPublishDate("03/12/2006");
-        book2.setGenre("Romance");
-        book2.setImageUrl("https://covers.openlibrary.org/b/id/215776-L.jpg");
-        book2.setStatus(bookStatus1);
-        em.persist(book2);
-
-        Book book3 = new Book();
-        book3.setIsbn("0373761229");
-        book3.setTitle("Your perfect right");
-        book3.setAuthor("Robert E. Alberti");
-        book3.setPublisher("Impact");
-        book3.setPublishDate("1974");
-        book3.setGenre("Communication");
-        book3.setImageUrl("https://covers.openlibrary.org/b/id/9839075-L.jpg");
-        book3.setStatus(bookStatus1);
-        em.persist(book3);
-
-        Book book4 = new Book();
-        book4.setIsbn("0373761252");
-        book4.setTitle("Lolita");
-        book4.setAuthor("Vladimir Nabokov");
-        book4.setPublisher("Caedmon");
-        book4.setPublishDate("1981");
-        book4.setGenre("Fiction");
-        book4.setImageUrl("https://covers.openlibrary.org/b/id/10522912-L.jpg");
-        book4.setStatus(bookStatus2);
-        em.persist(book4);
-
-        /* RENT */
-
-        Rent rent1 = new Rent();
-        rent1.setDate(LocalDate.now());
-        rent1.setManager(user1);
-        rent1.setRenter(user3);
-        em.persist(rent1);
-
-        Rent rent2 = new Rent();
-        rent2.setDate(LocalDate.now());
-        rent2.setManager(user1);
-        rent2.setRenter(user4);
-        em.persist(rent2);
+        em.persist(book1);  em.persist(book2);  em.persist(book3);  em.persist(book4);  em.persist(book5);
+        em.persist(book6);  em.persist(book7);  em.persist(book8);  em.persist(book9);  em.persist(book10);
+        em.persist(book11); em.persist(book12); em.persist(book13); em.persist(book14); em.persist(book15);
     }
 }
