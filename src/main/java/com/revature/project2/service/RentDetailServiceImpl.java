@@ -73,7 +73,7 @@ public class RentDetailServiceImpl implements RentDetailService {
 
     public double calculateFineAmount(LocalDate expiryDate, LocalDate returnDate) {
         if(returnDate.isAfter(expiryDate)) {
-            return returnDate.compareTo(expiryDate) * 2; // fine amount will be 2$/1 day
+            return returnDate.compareTo(expiryDate) * 2.00; // fine amount will be $2.00/1 day
         } else {
             return 0;
         }
