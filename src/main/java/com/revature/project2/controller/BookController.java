@@ -24,6 +24,7 @@ public class BookController {
 
     private String authorization = "Authorization";
     private String userRole = "user_role";
+    private String renter = "renter";
 
     @Autowired
     private BookService bookService;
@@ -42,14 +43,13 @@ public class BookController {
             try{
                 Jws<Claims> token = jwtService.parseJwt(jwt);
 
-                if(token.getBody().get(userRole).equals("renter")) {
+                if(token.getBody().get(userRole).equals(renter)) {
                     throw new UnAuthorizedResponse("This endpoint is used by manager only.");
                 }
 
                 // new added book has default Available status
                 BookStatus status = new BookStatus(1, "Available");
 
-                //Book book = new Book(isbn, title, author, publisher, publishDate, genre, status, imageUrl);
                 book.setStatus(status);
                 Book createdBook = bookService.createBook(book);
                 return ResponseEntity.ok().body(createdBook);
@@ -86,7 +86,7 @@ public class BookController {
             String jwt = headerValue.split(" ")[1];
             Jws<Claims> token = jwtService.parseJwt(jwt);
 
-            if(token.getBody().get(userRole).equals("renter")) {
+            if(token.getBody().get(userRole).equals(renter)) {
                 throw new UnAuthorizedResponse("This endpoint is used by manager only.");
             }
 
@@ -105,7 +105,7 @@ public class BookController {
             try{
                 Jws<Claims> token = jwtService.parseJwt(jwt);
 
-                if(token.getBody().get(userRole).equals("renter")) {
+                if(token.getBody().get(userRole).equals(renter)) {
                     throw new UnAuthorizedResponse("This endpoint is used by manager only.");
                 }
 

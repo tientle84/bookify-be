@@ -15,10 +15,4 @@ public interface RentService {
 
     public List<Rent> getAllRentsByRenterId(int id);
 
-//    public Rent getRentById(int id);
-//
-//    public Rent updateRent(int id, Rent rent);
-//
-//    public void deleteRentById(int rentId);
-
 }

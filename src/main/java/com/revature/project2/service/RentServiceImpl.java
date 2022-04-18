@@ -31,12 +31,6 @@ public class RentServiceImpl implements RentService{
         return rentRepository.save(rent);
     }
 
-//    @Override
-//    public Rent getRentById(int id) {
-//        Rent rent = rentRepository.findById(id).orElseThrow(() -> new RentNotFoundException("Rent not found"));
-//        return rent;
-//    }
-
     @Override
     public List<Rent> getAllRents() {
         return rentRepository.findAll();

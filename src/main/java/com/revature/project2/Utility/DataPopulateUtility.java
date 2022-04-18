@@ -18,6 +18,8 @@ public class DataPopulateUtility {
 
     @Transactional
     public void populateInitialData(){
+
+        String pw = "�\f!y=zc:��Y:�LKp";
         /*
         userRole
          */
@@ -34,7 +36,7 @@ public class DataPopulateUtility {
          */
         User user1 = new User();
         user1.setEmail("jenob@gmail.com");
-        user1.setPassword("�\f!y=zc:��Y:�LKp");
+        user1.setPassword(pw);
         user1.setFirstName("jenob");
         user1.setLastName("job");
         user1.setAddress("Toronto");
@@ -44,7 +46,7 @@ public class DataPopulateUtility {
 
         User user2 = new User();
         user2.setEmail("tienle@gmail.com");
-        user2.setPassword("�\f!y=zc:��Y:�LKp");
+        user2.setPassword(pw);
         user2.setFirstName("Tien");
         user2.setLastName("Le");
         user2.setAddress("123 abc");
@@ -54,7 +56,7 @@ public class DataPopulateUtility {
 
         User user3 = new User();
         user3.setEmail("johndoe@gmail.com");
-        user3.setPassword("�\f!y=zc:��Y:�LKp");
+        user3.setPassword(pw);
         user3.setFirstName("John");
         user3.setLastName("Doe");
         user3.setAddress("123 abc");
@@ -64,7 +66,7 @@ public class DataPopulateUtility {
 
         User user4 = new User();
         user4.setEmail("janedoe@gmail.com");
-        user4.setPassword("�\f!y=zc:��Y:�LKp");
+        user4.setPassword(pw);
         user4.setFirstName("Jane");
         user4.setLastName("Doe");
         user4.setAddress("1234 xyz");

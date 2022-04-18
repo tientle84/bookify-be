@@ -25,7 +25,6 @@ public class AuthenticationController {
     public ResponseEntity<?> login(@RequestBody LoginDTO dto) {
         try {
             User user = authService.login(dto.getEmail(), dto.getPassword());
-            System.out.println(user);
             String jwt = jwtService.createJwt(user);
             HttpHeaders responseHeaders = new HttpHeaders();
             responseHeaders.set("token", jwt);

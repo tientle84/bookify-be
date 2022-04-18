@@ -19,7 +19,6 @@ public class Project2Application {
 	private DataPopulateUtility util;
 
 	public static void main(String[] args) {
-		System.out.println("Date"+Timestamp.valueOf(LocalDateTime.now()));
 		SpringApplication.run(Project2Application.class, args);
 	}
 
