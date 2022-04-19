@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface RentDetailService {
 
-    public void createRentDetail(Rent rent, int bookId, LocalDate expiryDate);
+    public RentDetail createRentDetail(Rent rent, int bookId, LocalDate expiryDate);
 
     public List<RentDetail> getAllRentDetailByRentId(int id);
 

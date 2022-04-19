@@ -30,7 +30,7 @@ public class RentDetailServiceImpl implements RentDetailService {
     private UserRepository userRepository;
 
     @Override
-    public void createRentDetail(Rent rent, int bookId, LocalDate expiryDate) {
+    public RentDetail createRentDetail(Rent rent, int bookId, LocalDate expiryDate) {
 
         // pull the book from database
         Book book = bookRepository.findById(bookId).get();
@@ -43,6 +43,7 @@ public class RentDetailServiceImpl implements RentDetailService {
         // create rent detail
         RentDetail rentDetail = new RentDetail(rent, book, expiryDate, null, 0);
         rentDetailRepository.save(rentDetail);
+        return rentDetail;
     }
 
     @Override

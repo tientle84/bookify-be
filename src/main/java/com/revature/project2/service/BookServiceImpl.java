@@ -1,6 +1,7 @@
 package com.revature.project2.service;
 
 import com.revature.project2.dao.BookRepository;
+import com.revature.project2.exception.BadParameterException;
 import com.revature.project2.exception.BookNotFoundException;
 import com.revature.project2.exception.FailedDeleteException;
 import com.revature.project2.model.Book;
@@ -16,7 +17,7 @@ public class BookServiceImpl implements BookService {
     private BookRepository bookRepository;
 
     @Override
-    public Book createBook(Book book) {
+    public Book createBook(Book book) throws BadParameterException {
         return bookRepository.save(book);
     }
 
@@ -52,13 +53,15 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public void deleteBookById(int id) {
+    public boolean deleteBookById(int id) {
         Book targetBook = bookRepository.findById(id).orElseThrow(() -> new BookNotFoundException("Book not found."));
 
         if(targetBook.getStatus().getStatus().equals("Available")) {
             bookRepository.deleteById(id);
+            return true;
         } else {
             throw new FailedDeleteException("The currently rented book cannot be deleted.");
         }
+
     }
 }

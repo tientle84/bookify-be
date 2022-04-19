@@ -1,6 +1,7 @@
 package com.revature.project2.controller;
 
 import com.revature.project2.dao.UserRepository;
+import com.revature.project2.exception.BadParameterException;
 import com.revature.project2.exception.BookNotFoundException;
 import com.revature.project2.exception.FailedDeleteException;
 import com.revature.project2.exception.UnAuthorizedResponse;
@@ -56,6 +57,8 @@ public class BookController {
 
             } catch (DataIntegrityViolationException ex) {
                 return ResponseEntity.status(500).body("ISBN already exists.");
+            } catch (BadParameterException e) {
+                return ResponseEntity.status(500).body("Enter Book Details");
             }
         } else {
             return ResponseEntity.status(400).body("You have to login to use this function.");

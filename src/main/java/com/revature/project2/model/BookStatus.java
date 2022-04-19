@@ -20,6 +20,10 @@ public class BookStatus {
     @Column(name = "book_status")
     private String status;
 
+    public BookStatus(String status) {
+        this.status = status;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
