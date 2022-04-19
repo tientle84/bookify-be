@@ -18,6 +18,9 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book createBook(Book book) throws BadParameterException {
+        if(book.getIsbn().trim().equals("")||book.getAuthor().trim().equals("")||book.getTitle().trim().equals("")){
+            throw new BadParameterException("You must provide all Details");
+        }
         return bookRepository.save(book);
     }
 
