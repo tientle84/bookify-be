@@ -1,0 +1,840 @@
+18 04 2022 - 02:14:36.086 [restartedMain] INFO  c.r.project2.Project2Application - Starting Project2Application using Java 1.8.0_321 on DESKTOP-DKQU4B8 with PID 23124 (F:\GDrive\Coding\java\bookshelf1\build\classes\java\main started by alctd in F:\GDrive\Coding\java\bookshelf1)
+18 04 2022 - 02:14:36.089 [restartedMain] INFO  c.r.project2.Project2Application - The following 1 profile is active: "prod"
+18 04 2022 - 02:14:36.135 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+18 04 2022 - 02:14:36.136 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+18 04 2022 - 02:14:36.725 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18 04 2022 - 02:14:36.807 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 4 JPA repository interfaces.
+18 04 2022 - 02:14:38.015 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9002 (http)
+18 04 2022 - 02:14:38.058 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 02:14:38.059 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18 04 2022 - 02:14:38.059 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+18 04 2022 - 02:14:38.139 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18 04 2022 - 02:14:38.139 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2002 ms
+18 04 2022 - 02:14:38.196 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18 04 2022 - 02:14:39.082 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18 04 2022 - 02:14:39.091 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://34.135.17.185:5432/postgres'
+18 04 2022 - 02:14:39.263 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+18 04 2022 - 02:14:39.328 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.7.Final
+18 04 2022 - 02:14:39.493 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+18 04 2022 - 02:14:39.589 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18 04 2022 - 02:14:41.453 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18 04 2022 - 02:14:41.461 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18 04 2022 - 02:14:42.449 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18 04 2022 - 02:14:42.996 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+18 04 2022 - 02:14:43.007 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 02:14:43.022 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9002 (http) with context path ''
+18 04 2022 - 02:14:43.028 [restartedMain] INFO  c.r.project2.Project2Application - Started Project2Application in 7.284 seconds (JVM running for 7.808)
+18 04 2022 - 02:14:43.033 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:14:43.080 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:14:44.048 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:14:44.095 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:15:47.402 [http-nio-9002-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18 04 2022 - 02:15:47.402 [http-nio-9002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18 04 2022 - 02:15:47.404 [http-nio-9002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+18 04 2022 - 02:15:47.523 [http-nio-9002-exec-1] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:15:47.528 [http-nio-9002-exec-1] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:15:47.623 [http-nio-9002-exec-1] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:15:47.793 [http-nio-9002-exec-1] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:15:47.794 [http-nio-9002-exec-1] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:15:47.794 [http-nio-9002-exec-1] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:15:47.834 [http-nio-9002-exec-1] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:15:47.837 [http-nio-9002-exec-1] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:21:03.733 [restartedMain] INFO  c.r.project2.Project2Application - Starting Project2Application using Java 1.8.0_321 on DESKTOP-DKQU4B8 with PID 37072 (F:\GDrive\Coding\java\bookshelf1\build\classes\java\main started by alctd in F:\GDrive\Coding\java\bookshelf1)
+18 04 2022 - 02:21:03.737 [restartedMain] INFO  c.r.project2.Project2Application - The following 1 profile is active: "prod"
+18 04 2022 - 02:21:03.785 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+18 04 2022 - 02:21:03.786 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+18 04 2022 - 02:21:04.349 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18 04 2022 - 02:21:04.422 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 4 JPA repository interfaces.
+18 04 2022 - 02:21:05.557 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9002 (http)
+18 04 2022 - 02:21:05.610 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 02:21:05.610 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18 04 2022 - 02:21:05.611 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+18 04 2022 - 02:21:05.712 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18 04 2022 - 02:21:05.712 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1926 ms
+18 04 2022 - 02:21:05.768 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18 04 2022 - 02:21:06.726 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18 04 2022 - 02:21:06.735 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://34.135.17.185:5432/postgres'
+18 04 2022 - 02:21:06.926 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+18 04 2022 - 02:21:06.990 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.7.Final
+18 04 2022 - 02:21:07.197 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+18 04 2022 - 02:21:07.345 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18 04 2022 - 02:21:09.251 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18 04 2022 - 02:21:09.258 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18 04 2022 - 02:21:10.243 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18 04 2022 - 02:21:10.717 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+18 04 2022 - 02:21:10.729 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 02:21:10.750 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9002 (http) with context path ''
+18 04 2022 - 02:21:10.758 [restartedMain] INFO  c.r.project2.Project2Application - Started Project2Application in 7.332 seconds (JVM running for 7.848)
+18 04 2022 - 02:21:10.764 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Before method:void org.springframework.boot.CommandLineRunner.run(String[])
+18 04 2022 - 02:21:10.764 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:21:10.814 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Before method:void com.revature.project2.Utility.DataPopulateUtility.populateInitialData()
+18 04 2022 - 02:21:10.814 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:21:11.783 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - After method:void com.revature.project2.Utility.DataPopulateUtility.populateInitialData()
+18 04 2022 - 02:21:11.783 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:21:11.831 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - After method:void org.springframework.boot.CommandLineRunner.run(String[])
+18 04 2022 - 02:21:11.831 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:21:45.616 [http-nio-9002-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18 04 2022 - 02:21:45.616 [http-nio-9002-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18 04 2022 - 02:21:45.618 [http-nio-9002-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+18 04 2022 - 02:21:45.798 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Before method:ResponseEntity com.revature.project2.controller.AuthenticationController.login(LoginDTO)
+18 04 2022 - 02:21:45.798 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:21:45.804 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Before method:User com.revature.project2.service.AuthenticationService.login(String,String)
+18 04 2022 - 02:21:45.804 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:21:45.934 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Before method:User com.revature.project2.dao.UserRepository.findByEmailAndPassword(String,String)
+18 04 2022 - 02:21:45.935 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:21:46.112 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:User com.revature.project2.dao.UserRepository.findByEmailAndPassword(String,String)
+18 04 2022 - 02:21:46.112 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:21:46.112 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:User com.revature.project2.service.AuthenticationService.login(String,String)
+18 04 2022 - 02:21:46.112 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:21:46.112 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Before method:String com.revature.project2.service.JwtService.createJwt(User)
+18 04 2022 - 02:21:46.112 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:21:46.172 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:String com.revature.project2.service.JwtService.createJwt(User)
+18 04 2022 - 02:21:46.173 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:21:46.177 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:ResponseEntity com.revature.project2.controller.AuthenticationController.login(LoginDTO)
+18 04 2022 - 02:21:46.177 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:25:46.823 [restartedMain] INFO  c.r.project2.Project2Application - Starting Project2Application using Java 1.8.0_321 on DESKTOP-DKQU4B8 with PID 36928 (F:\GDrive\Coding\java\bookshelf1\build\classes\java\main started by alctd in F:\GDrive\Coding\java\bookshelf1)
+18 04 2022 - 02:25:46.825 [restartedMain] INFO  c.r.project2.Project2Application - The following 1 profile is active: "prod"
+18 04 2022 - 02:25:46.870 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+18 04 2022 - 02:25:46.870 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+18 04 2022 - 02:25:47.400 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18 04 2022 - 02:25:47.461 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+18 04 2022 - 02:25:48.533 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9002 (http)
+18 04 2022 - 02:25:48.578 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 02:25:48.579 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18 04 2022 - 02:25:48.579 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+18 04 2022 - 02:25:48.668 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18 04 2022 - 02:25:48.668 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1797 ms
+18 04 2022 - 02:25:48.720 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18 04 2022 - 02:25:49.687 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18 04 2022 - 02:25:49.697 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://34.135.17.185:5432/postgres'
+18 04 2022 - 02:25:49.882 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+18 04 2022 - 02:25:49.935 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.7.Final
+18 04 2022 - 02:25:50.103 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+18 04 2022 - 02:25:50.198 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18 04 2022 - 02:25:52.081 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18 04 2022 - 02:25:52.088 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18 04 2022 - 02:25:53.099 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18 04 2022 - 02:25:53.585 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+18 04 2022 - 02:25:53.597 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 02:25:53.613 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9002 (http) with context path ''
+18 04 2022 - 02:25:53.621 [restartedMain] INFO  c.r.project2.Project2Application - Started Project2Application in 7.107 seconds (JVM running for 7.565)
+18 04 2022 - 02:25:53.626 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Before method:void org.springframework.boot.CommandLineRunner.run(String[])
+18 04 2022 - 02:25:53.626 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:25:53.674 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Before method:void com.revature.project2.Utility.DataPopulateUtility.populateInitialData()
+18 04 2022 - 02:25:53.674 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:25:54.636 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - After method:method-callmethod-execution
+18 04 2022 - 02:25:54.636 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:25:54.682 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - After method:method-callmethod-execution
+18 04 2022 - 02:25:54.682 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:26:07.606 [http-nio-9002-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18 04 2022 - 02:26:07.606 [http-nio-9002-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18 04 2022 - 02:26:07.608 [http-nio-9002-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+18 04 2022 - 02:26:07.766 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Before method:ResponseEntity com.revature.project2.controller.AuthenticationController.login(LoginDTO)
+18 04 2022 - 02:26:07.766 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:26:07.771 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Before method:User com.revature.project2.service.AuthenticationService.login(String,String)
+18 04 2022 - 02:26:07.771 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:26:07.950 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Before method:User com.revature.project2.dao.UserRepository.findByEmailAndPassword(String,String)
+18 04 2022 - 02:26:07.950 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:26:08.115 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:method-callmethod-execution
+18 04 2022 - 02:26:08.115 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:26:08.115 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:method-callmethod-execution
+18 04 2022 - 02:26:08.115 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:26:08.115 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Before method:String com.revature.project2.service.JwtService.createJwt(User)
+18 04 2022 - 02:26:08.116 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:26:08.157 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:method-callmethod-execution
+18 04 2022 - 02:26:08.157 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:26:08.160 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:method-callmethod-execution
+18 04 2022 - 02:26:08.160 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:42:38.226 [restartedMain] INFO  c.r.project2.Project2Application - Starting Project2Application using Java 1.8.0_321 on DESKTOP-DKQU4B8 with PID 34840 (F:\GDrive\Coding\java\bookshelf1\build\classes\java\main started by alctd in F:\GDrive\Coding\java\bookshelf1)
+18 04 2022 - 02:42:38.229 [restartedMain] INFO  c.r.project2.Project2Application - The following 1 profile is active: "prod"
+18 04 2022 - 02:42:38.271 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+18 04 2022 - 02:42:38.271 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+18 04 2022 - 02:42:38.832 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18 04 2022 - 02:42:38.909 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 64 ms. Found 4 JPA repository interfaces.
+18 04 2022 - 02:42:39.854 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9002 (http)
+18 04 2022 - 02:42:39.863 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 02:42:39.863 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18 04 2022 - 02:42:39.864 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+18 04 2022 - 02:42:39.992 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18 04 2022 - 02:42:39.992 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1720 ms
+18 04 2022 - 02:42:40.039 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18 04 2022 - 02:42:40.927 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18 04 2022 - 02:42:40.936 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://34.135.17.185:5432/postgres'
+18 04 2022 - 02:42:41.149 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+18 04 2022 - 02:42:41.222 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.7.Final
+18 04 2022 - 02:42:41.427 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+18 04 2022 - 02:42:41.581 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18 04 2022 - 02:42:43.425 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18 04 2022 - 02:42:43.434 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18 04 2022 - 02:42:44.339 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18 04 2022 - 02:42:44.729 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+18 04 2022 - 02:42:44.741 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 02:42:44.761 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9002 (http) with context path ''
+18 04 2022 - 02:42:44.768 [restartedMain] INFO  c.r.project2.Project2Application - Started Project2Application in 6.829 seconds (JVM running for 7.308)
+18 04 2022 - 02:42:53.487 [http-nio-9002-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18 04 2022 - 02:42:53.487 [http-nio-9002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18 04 2022 - 02:42:53.488 [http-nio-9002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+18 04 2022 - 02:48:33.795 [restartedMain] INFO  c.r.project2.Project2Application - Starting Project2Application using Java 1.8.0_321 on DESKTOP-DKQU4B8 with PID 33716 (F:\GDrive\Coding\java\bookshelf1\build\classes\java\main started by alctd in F:\GDrive\Coding\java\bookshelf1)
+18 04 2022 - 02:48:33.798 [restartedMain] INFO  c.r.project2.Project2Application - The following 1 profile is active: "prod"
+18 04 2022 - 02:48:33.843 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+18 04 2022 - 02:48:33.843 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+18 04 2022 - 02:48:34.438 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18 04 2022 - 02:48:34.498 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 4 JPA repository interfaces.
+18 04 2022 - 02:48:35.580 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9002 (http)
+18 04 2022 - 02:48:35.623 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 02:48:35.624 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18 04 2022 - 02:48:35.624 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+18 04 2022 - 02:48:35.719 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18 04 2022 - 02:48:35.719 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1876 ms
+18 04 2022 - 02:48:35.784 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18 04 2022 - 02:48:36.733 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18 04 2022 - 02:48:36.742 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://34.135.17.185:5432/postgres'
+18 04 2022 - 02:48:36.902 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+18 04 2022 - 02:48:36.946 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.7.Final
+18 04 2022 - 02:48:37.112 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+18 04 2022 - 02:48:37.216 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18 04 2022 - 02:48:39.079 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18 04 2022 - 02:48:39.087 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18 04 2022 - 02:48:39.955 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18 04 2022 - 02:48:40.347 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+18 04 2022 - 02:48:40.360 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 02:48:40.381 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9002 (http) with context path ''
+18 04 2022 - 02:48:40.389 [restartedMain] INFO  c.r.project2.Project2Application - Started Project2Application in 6.905 seconds (JVM running for 7.362)
+18 04 2022 - 02:48:41.414 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - After method:populateInitialDatamethod-execution
+18 04 2022 - 02:48:41.414 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:48:41.461 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - After method:runmethod-execution
+18 04 2022 - 02:48:41.461 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:48:46.866 [http-nio-9002-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18 04 2022 - 02:48:46.866 [http-nio-9002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18 04 2022 - 02:48:46.868 [http-nio-9002-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+18 04 2022 - 02:48:47.298 [http-nio-9002-exec-1] INFO  c.r.project2.aspect.LoggingAspect - After method:findByEmailAndPasswordmethod-execution
+18 04 2022 - 02:48:47.299 [http-nio-9002-exec-1] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:48:47.299 [http-nio-9002-exec-1] INFO  c.r.project2.aspect.LoggingAspect - After method:loginmethod-execution
+18 04 2022 - 02:48:47.299 [http-nio-9002-exec-1] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:48:47.348 [http-nio-9002-exec-1] INFO  c.r.project2.aspect.LoggingAspect - After method:createJwtmethod-execution
+18 04 2022 - 02:48:47.349 [http-nio-9002-exec-1] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:48:47.353 [http-nio-9002-exec-1] INFO  c.r.project2.aspect.LoggingAspect - After method:loginmethod-execution
+18 04 2022 - 02:48:47.353 [http-nio-9002-exec-1] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:53:18.360 [restartedMain] INFO  c.r.project2.Project2Application - Starting Project2Application using Java 1.8.0_321 on DESKTOP-DKQU4B8 with PID 13996 (F:\GDrive\Coding\java\bookshelf1\build\classes\java\main started by alctd in F:\GDrive\Coding\java\bookshelf1)
+18 04 2022 - 02:53:18.363 [restartedMain] INFO  c.r.project2.Project2Application - The following 1 profile is active: "prod"
+18 04 2022 - 02:53:18.407 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+18 04 2022 - 02:53:18.407 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+18 04 2022 - 02:53:18.908 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18 04 2022 - 02:53:18.972 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 4 JPA repository interfaces.
+18 04 2022 - 02:53:19.965 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9002 (http)
+18 04 2022 - 02:53:20.006 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 02:53:20.006 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18 04 2022 - 02:53:20.006 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+18 04 2022 - 02:53:20.099 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18 04 2022 - 02:53:20.099 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1691 ms
+18 04 2022 - 02:53:20.161 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18 04 2022 - 02:53:21.133 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18 04 2022 - 02:53:21.143 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://34.135.17.185:5432/postgres'
+18 04 2022 - 02:53:21.310 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+18 04 2022 - 02:53:21.363 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.7.Final
+18 04 2022 - 02:53:21.649 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+18 04 2022 - 02:53:21.803 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18 04 2022 - 02:53:23.880 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18 04 2022 - 02:53:23.887 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18 04 2022 - 02:53:24.832 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18 04 2022 - 02:53:25.257 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+18 04 2022 - 02:53:25.270 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 02:53:25.286 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9002 (http) with context path ''
+18 04 2022 - 02:53:25.294 [restartedMain] INFO  c.r.project2.Project2Application - Started Project2Application in 7.254 seconds (JVM running for 7.709)
+18 04 2022 - 02:53:26.318 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - After method:populateInitialData
+18 04 2022 - 02:53:26.318 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - After method:com.revature.project2.Utility.DataPopulateUtility
+18 04 2022 - 02:53:26.318 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - After method:com.revature.project2.Utility.DataPopulateUtility@633cba78
+18 04 2022 - 02:53:26.319 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:53:26.367 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - After method:run
+18 04 2022 - 02:53:26.367 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - After method:org.springframework.boot.CommandLineRunner
+18 04 2022 - 02:53:26.367 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - After method:com.revature.project2.Project2Application$$Lambda$900/69448744@3d6519af
+18 04 2022 - 02:53:26.367 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:53:42.716 [http-nio-9002-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18 04 2022 - 02:53:42.717 [http-nio-9002-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18 04 2022 - 02:53:42.718 [http-nio-9002-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+18 04 2022 - 02:53:43.125 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:findByEmailAndPassword
+18 04 2022 - 02:53:43.125 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:com.revature.project2.dao.UserRepository
+18 04 2022 - 02:53:43.127 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:org.springframework.data.jpa.repository.support.SimpleJpaRepository@282e9427
+18 04 2022 - 02:53:43.127 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:53:43.127 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:login
+18 04 2022 - 02:53:43.127 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:com.revature.project2.service.AuthenticationService
+18 04 2022 - 02:53:43.127 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:com.revature.project2.service.AuthenticationService@535bdcc6
+18 04 2022 - 02:53:43.127 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:53:43.182 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:createJwt
+18 04 2022 - 02:53:43.182 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:com.revature.project2.service.JwtService
+18 04 2022 - 02:53:43.182 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:com.revature.project2.service.JwtService@7153e448
+18 04 2022 - 02:53:43.182 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:53:43.186 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:login
+18 04 2022 - 02:53:43.186 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:com.revature.project2.controller.AuthenticationController
+18 04 2022 - 02:53:43.186 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - After method:com.revature.project2.controller.AuthenticationController@15583769
+18 04 2022 - 02:53:43.186 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:57:48.500 [restartedMain] INFO  c.r.project2.Project2Application - Starting Project2Application using Java 1.8.0_321 on DESKTOP-DKQU4B8 with PID 39908 (F:\GDrive\Coding\java\bookshelf1\build\classes\java\main started by alctd in F:\GDrive\Coding\java\bookshelf1)
+18 04 2022 - 02:57:48.502 [restartedMain] INFO  c.r.project2.Project2Application - The following 1 profile is active: "prod"
+18 04 2022 - 02:57:48.544 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+18 04 2022 - 02:57:48.545 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+18 04 2022 - 02:57:49.273 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18 04 2022 - 02:57:49.347 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 4 JPA repository interfaces.
+18 04 2022 - 02:57:50.422 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9002 (http)
+18 04 2022 - 02:57:50.469 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 02:57:50.469 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18 04 2022 - 02:57:50.469 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+18 04 2022 - 02:57:50.585 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18 04 2022 - 02:57:50.586 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2041 ms
+18 04 2022 - 02:57:50.643 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18 04 2022 - 02:57:51.518 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18 04 2022 - 02:57:51.527 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://34.135.17.185:5432/postgres'
+18 04 2022 - 02:57:51.710 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+18 04 2022 - 02:57:51.769 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.7.Final
+18 04 2022 - 02:57:51.920 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+18 04 2022 - 02:57:52.027 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18 04 2022 - 02:57:53.913 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18 04 2022 - 02:57:53.920 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18 04 2022 - 02:57:54.836 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18 04 2022 - 02:57:55.313 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+18 04 2022 - 02:57:55.324 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 02:57:55.340 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9002 (http) with context path ''
+18 04 2022 - 02:57:55.347 [restartedMain] INFO  c.r.project2.Project2Application - Started Project2Application in 7.145 seconds (JVM running for 7.64)
+18 04 2022 - 02:57:55.351 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Before method:void org.springframework.boot.CommandLineRunner.run(String[])
+18 04 2022 - 02:57:55.351 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:57:55.411 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Before method:void com.revature.project2.Utility.DataPopulateUtility.populateInitialData()
+18 04 2022 - 02:57:55.411 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:57:56.365 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Method: populateInitialData
+18 04 2022 - 02:57:56.365 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Path: com.revature.project2.Utility.DataPopulateUtility
+18 04 2022 - 02:57:56.365 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:57:56.411 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Method: run
+18 04 2022 - 02:57:56.411 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Path: org.springframework.boot.CommandLineRunner
+18 04 2022 - 02:57:56.411 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:59:21.401 [restartedMain] INFO  c.r.project2.Project2Application - Starting Project2Application using Java 1.8.0_321 on DESKTOP-DKQU4B8 with PID 22712 (F:\GDrive\Coding\java\bookshelf1\build\classes\java\main started by alctd in F:\GDrive\Coding\java\bookshelf1)
+18 04 2022 - 02:59:21.404 [restartedMain] INFO  c.r.project2.Project2Application - The following 1 profile is active: "prod"
+18 04 2022 - 02:59:21.498 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+18 04 2022 - 02:59:21.498 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+18 04 2022 - 02:59:22.065 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18 04 2022 - 02:59:22.142 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 4 JPA repository interfaces.
+18 04 2022 - 02:59:23.293 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9002 (http)
+18 04 2022 - 02:59:23.308 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 02:59:23.309 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18 04 2022 - 02:59:23.310 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+18 04 2022 - 02:59:23.430 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18 04 2022 - 02:59:23.430 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1931 ms
+18 04 2022 - 02:59:23.497 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18 04 2022 - 02:59:24.480 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18 04 2022 - 02:59:24.489 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://34.135.17.185:5432/postgres'
+18 04 2022 - 02:59:24.666 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+18 04 2022 - 02:59:24.710 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.7.Final
+18 04 2022 - 02:59:24.874 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+18 04 2022 - 02:59:24.978 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18 04 2022 - 02:59:26.924 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18 04 2022 - 02:59:26.932 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18 04 2022 - 02:59:27.942 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18 04 2022 - 02:59:28.414 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+18 04 2022 - 02:59:28.425 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 02:59:28.442 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9002 (http) with context path ''
+18 04 2022 - 02:59:28.448 [restartedMain] INFO  c.r.project2.Project2Application - Started Project2Application in 7.357 seconds (JVM running for 7.811)
+18 04 2022 - 02:59:28.452 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:59:28.499 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:59:29.478 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Method: populateInitialData
+18 04 2022 - 02:59:29.478 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Path: com.revature.project2.Utility.DataPopulateUtility
+18 04 2022 - 02:59:29.478 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Target: DataPopulateUtility
+18 04 2022 - 02:59:29.478 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:59:29.526 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Method: run
+18 04 2022 - 02:59:29.526 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Path: org.springframework.boot.CommandLineRunner
+18 04 2022 - 02:59:29.526 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Target: Project2Application$$Lambda$900/1633880738
+18 04 2022 - 02:59:29.526 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:59:39.601 [http-nio-9002-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18 04 2022 - 02:59:39.602 [http-nio-9002-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18 04 2022 - 02:59:39.603 [http-nio-9002-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+18 04 2022 - 02:59:39.781 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:59:39.785 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:59:39.893 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:59:40.080 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Method: findByEmailAndPassword
+18 04 2022 - 02:59:40.080 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Path: com.revature.project2.dao.UserRepository
+18 04 2022 - 02:59:40.080 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Target: $Proxy111
+18 04 2022 - 02:59:40.080 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:59:40.080 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Method: login
+18 04 2022 - 02:59:40.080 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Path: com.revature.project2.service.AuthenticationService
+18 04 2022 - 02:59:40.080 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Target: AuthenticationService
+18 04 2022 - 02:59:40.080 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:59:40.080 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 02:59:40.127 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Method: createJwt
+18 04 2022 - 02:59:40.127 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Path: com.revature.project2.service.JwtService
+18 04 2022 - 02:59:40.127 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Target: JwtService
+18 04 2022 - 02:59:40.127 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 02:59:40.130 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Method: login
+18 04 2022 - 02:59:40.130 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Path: com.revature.project2.controller.AuthenticationController
+18 04 2022 - 02:59:40.130 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Target: AuthenticationController
+18 04 2022 - 02:59:40.130 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 09:50:21.810 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6h28m26s962ms651탎900ns).
+18 04 2022 - 09:58:54.675 [restartedMain] INFO  c.r.project2.Project2Application - Starting Project2Application using Java 1.8.0_321 on DESKTOP-DKQU4B8 with PID 36288 (F:\GDrive\Coding\java\bookshelf1\build\classes\java\main started by alctd in F:\GDrive\Coding\java\bookshelf1)
+18 04 2022 - 09:58:54.677 [restartedMain] INFO  c.r.project2.Project2Application - The following 1 profile is active: "prod"
+18 04 2022 - 09:58:54.722 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+18 04 2022 - 09:58:54.722 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+18 04 2022 - 09:58:55.235 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+18 04 2022 - 09:58:55.293 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
+18 04 2022 - 09:58:56.306 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9002 (http)
+18 04 2022 - 09:58:56.346 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 09:58:56.346 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+18 04 2022 - 09:58:56.346 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+18 04 2022 - 09:58:56.425 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+18 04 2022 - 09:58:56.426 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1703 ms
+18 04 2022 - 09:58:56.467 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+18 04 2022 - 09:58:57.416 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+18 04 2022 - 09:58:57.426 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://34.135.17.185:5432/postgres'
+18 04 2022 - 09:58:57.597 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+18 04 2022 - 09:58:57.644 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.7.Final
+18 04 2022 - 09:58:57.796 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+18 04 2022 - 09:58:57.912 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+18 04 2022 - 09:58:59.821 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+18 04 2022 - 09:58:59.827 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+18 04 2022 - 09:59:00.710 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+18 04 2022 - 09:59:01.089 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+18 04 2022 - 09:59:01.099 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9002"]
+18 04 2022 - 09:59:01.118 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9002 (http) with context path ''
+18 04 2022 - 09:59:01.125 [restartedMain] INFO  c.r.project2.Project2Application - Started Project2Application in 6.769 seconds (JVM running for 7.248)
+18 04 2022 - 09:59:02.211 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 09:59:02.211 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Method: populateInitialData
+18 04 2022 - 09:59:02.212 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Path: com.revature.project2.Utility.DataPopulateUtility
+18 04 2022 - 09:59:02.212 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Target: DataPopulateUtility
+18 04 2022 - 09:59:02.212 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 09:59:02.260 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 09:59:02.260 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Method: run
+18 04 2022 - 09:59:02.260 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Path: org.springframework.boot.CommandLineRunner
+18 04 2022 - 09:59:02.260 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Target: Project2Application$$Lambda$899/2017748266
+18 04 2022 - 09:59:02.260 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 11:47:16.505 [http-nio-9002-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+18 04 2022 - 11:47:16.506 [http-nio-9002-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+18 04 2022 - 11:47:16.508 [http-nio-9002-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+18 04 2022 - 11:47:16.920 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 11:47:16.921 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Method: findByEmailAndPassword
+18 04 2022 - 11:47:16.921 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Path: com.revature.project2.dao.UserRepository
+18 04 2022 - 11:47:16.921 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Target: $Proxy110
+18 04 2022 - 11:47:16.921 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 11:47:16.921 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 11:47:16.921 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Method: login
+18 04 2022 - 11:47:16.921 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Path: com.revature.project2.service.AuthenticationService
+18 04 2022 - 11:47:16.921 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Target: AuthenticationService
+18 04 2022 - 11:47:16.921 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 11:47:16.992 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 11:47:16.993 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Method: createJwt
+18 04 2022 - 11:47:16.993 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Path: com.revature.project2.service.JwtService
+18 04 2022 - 11:47:16.993 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Target: JwtService
+18 04 2022 - 11:47:16.993 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 11:47:16.997 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+18 04 2022 - 11:47:16.997 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Method: login
+18 04 2022 - 11:47:16.997 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Path: com.revature.project2.controller.AuthenticationController
+18 04 2022 - 11:47:16.997 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - Target: AuthenticationController
+18 04 2022 - 11:47:16.997 [http-nio-9002-exec-2] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+18 04 2022 - 21:56:46.597 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h25m9s218ms991탎400ns).
+19 04 2022 - 10:01:25.656 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8h58m6s59ms157탎500ns).
+19 04 2022 - 14:00:31.499 [restartedMain] INFO  c.r.project2.Project2Application - Starting Project2Application using Java 1.8.0_321 on DESKTOP-DKQU4B8 with PID 42808 (F:\GDrive\Coding\java\bookshelf1\build\classes\java\main started by alctd in F:\GDrive\Coding\java\bookshelf1)
+19 04 2022 - 14:00:31.502 [restartedMain] INFO  c.r.project2.Project2Application - The following 1 profile is active: "prod"
+19 04 2022 - 14:00:31.548 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+19 04 2022 - 14:00:31.548 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+19 04 2022 - 14:00:32.089 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19 04 2022 - 14:00:32.152 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 4 JPA repository interfaces.
+19 04 2022 - 14:00:33.217 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9002 (http)
+19 04 2022 - 14:00:33.258 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9002"]
+19 04 2022 - 14:00:33.258 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+19 04 2022 - 14:00:33.259 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+19 04 2022 - 14:00:33.342 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+19 04 2022 - 14:00:33.342 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1793 ms
+19 04 2022 - 14:00:33.392 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+19 04 2022 - 14:00:34.333 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+19 04 2022 - 14:00:34.342 [restartedMain] INFO  o.s.b.a.h.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://34.135.17.185:5432/postgres'
+19 04 2022 - 14:00:34.531 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+19 04 2022 - 14:00:34.603 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.7.Final
+19 04 2022 - 14:00:34.778 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+19 04 2022 - 14:00:34.929 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+19 04 2022 - 14:00:36.845 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+19 04 2022 - 14:00:36.852 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+19 04 2022 - 14:00:37.689 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+19 04 2022 - 14:00:38.127 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+19 04 2022 - 14:00:38.141 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9002"]
+19 04 2022 - 14:00:38.159 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9002 (http) with context path ''
+19 04 2022 - 14:00:38.167 [restartedMain] INFO  c.r.project2.Project2Application - Started Project2Application in 6.994 seconds (JVM running for 7.521)
+19 04 2022 - 14:00:39.213 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+19 04 2022 - 14:00:39.214 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Method: populateInitialData
+19 04 2022 - 14:00:39.214 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Path: com.revature.project2.Utility.DataPopulateUtility
+19 04 2022 - 14:00:39.214 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Target: DataPopulateUtility
+19 04 2022 - 14:00:39.214 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+19 04 2022 - 14:00:39.262 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User is making a request...
+19 04 2022 - 14:00:39.262 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Method: run
+19 04 2022 - 14:00:39.262 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Path: org.springframework.boot.CommandLineRunner
+19 04 2022 - 14:00:39.262 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - Target: Project2Application$$Lambda$899/946845837
+19 04 2022 - 14:00:39.262 [restartedMain] INFO  c.r.project2.aspect.LoggingAspect - User request is now completed.
+19 04 2022 - 19:48:15.974 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h41m7s577ms655탎).
+19 04 2022 - 21:32:56.114 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=54m39s456ms811탎200ns).
+20 04 2022 - 10:00:03.503 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h59m35s291ms336탎100ns).
+28 04 2022 - 13:46:53.137 [restartedMain] INFO  c.r.project2.Project2Application - Starting Project2Application using Java 1.8.0_321 on DESKTOP-DKQU4B8 with PID 35248 (F:\GDrive\Coding\java\bookshelf1\build\classes\java\main started by alctd in F:\GDrive\Coding\java\bookshelf1)
+28 04 2022 - 13:46:53.145 [restartedMain] INFO  c.r.project2.Project2Application - The following 1 profile is active: "prod"
+28 04 2022 - 13:46:53.193 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+28 04 2022 - 13:46:53.193 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+28 04 2022 - 13:46:53.865 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+28 04 2022 - 13:46:53.928 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 54 ms. Found 4 JPA repository interfaces.
+28 04 2022 - 13:46:54.952 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9002 (http)
+28 04 2022 - 13:46:54.992 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9002"]
+28 04 2022 - 13:46:54.993 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+28 04 2022 - 13:46:54.993 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+28 04 2022 - 13:46:55.067 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+28 04 2022 - 13:46:55.068 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1875 ms
+28 04 2022 - 13:46:55.113 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+28 04 2022 - 13:46:56.809 [restartedMain] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:400)
+	at org.postgresql.Driver.connect(Driver.java:259)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.lambda$logDataSources$0(H2ConsoleAutoConfiguration.java:77)
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:193)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:390)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:708)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:499)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.logDataSources(H2ConsoleAutoConfiguration.java:83)
+	at org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration.h2Console(H2ConsoleAutoConfiguration.java:70)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:203)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:97)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:260)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:234)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:478)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:182)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:160)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.revature.project2.Project2Application.main(Project2Application.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+28 04 2022 - 13:46:57.004 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+28 04 2022 - 13:46:57.070 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.7.Final
+28 04 2022 - 13:46:57.317 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+28 04 2022 - 13:46:57.426 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+28 04 2022 - 13:46:58.732 [restartedMain] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:400)
+	at org.postgresql.Driver.connect(Driver.java:259)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.revature.project2.Project2Application.main(Project2Application.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+28 04 2022 - 13:46:58.732 [restartedMain] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:400)
+	at org.postgresql.Driver.connect(Driver.java:259)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:35)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:101)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:237)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.id.factory.internal.DefaultIdentifierGeneratorFactory.injectServices(DefaultIdentifierGeneratorFactory.java:175)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.injectDependencies(AbstractServiceRegistryImpl.java:286)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:243)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:214)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:173)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:127)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.revature.project2.Project2Application.main(Project2Application.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+28 04 2022 - 13:46:58.745 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+28 04 2022 - 13:46:59.498 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+28 04 2022 - 13:47:00.825 [restartedMain] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:400)
+	at org.postgresql.Driver.connect(Driver.java:259)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.jdbcStatement(GenerationTargetToDatabase.java:77)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:53)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.revature.project2.Project2Application.main(Project2Application.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+28 04 2022 - 13:47:00.826 [restartedMain] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 28P01
+28 04 2022 - 13:47:00.827 [restartedMain] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - FATAL: password authentication failed for user "postgres"
+28 04 2022 - 13:47:00.831 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+28 04 2022 - 13:47:00.831 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+28 04 2022 - 13:47:00.833 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+28 04 2022 - 13:47:00.843 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+28 04 2022 - 13:47:00.858 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
+	at com.revature.project2.Project2Application.main(Project2Application.java:22)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 21 common frames omitted
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:42)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:113)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:99)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:71)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.jdbcStatement(GenerationTargetToDatabase.java:77)
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:53)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlString(SchemaDropperImpl.java:387)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applySqlStrings(SchemaDropperImpl.java:371)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.applyConstraintDropping(SchemaDropperImpl.java:341)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.dropFromMetadata(SchemaDropperImpl.java:235)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.performDrop(SchemaDropperImpl.java:156)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:128)
+	at org.hibernate.tool.schema.internal.SchemaDropperImpl.doDrop(SchemaDropperImpl.java:114)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:157)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:85)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:335)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:471)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1498)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 25 common frames omitted
+Caused by: org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:646)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:180)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:235)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:223)
+	at org.postgresql.Driver.makeConnection(Driver.java:400)
+	at org.postgresql.Driver.connect(Driver.java:259)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:181)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:44)
+	... 42 common frames omitted
